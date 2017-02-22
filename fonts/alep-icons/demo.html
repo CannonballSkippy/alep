@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+@font-face {
+      font-family: 'alep_icons';
+      src: url('./font/alep_icons.eot?36868762');
+      src: url('./font/alep_icons.eot?36868762#iefix') format('embedded-opentype'),
+           url('./font/alep_icons.woff?36868762') format('woff'),
+           url('./font/alep_icons.ttf?36868762') format('truetype'),
+           url('./font/alep_icons.svg?36868762#alep_icons') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+     
+     
+    .demo-icon
+    {
+      font-family: "alep_icons";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+     </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/alep_icons-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>
+        alep_icons
+         <small>font demo</small>
+      </h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div id="icons" class="container">
+      <div class="row">
+        <div title="Code: 0xe800" class="the-icons span3"><i class="demo-icon cubase.alep-icon span">&#xe800;</i> <span class="i-name">cubase.alep-icon span</span><span class="i-code">0xe800</span></div>
+        <div title="Code: 0xe801" class="the-icons span3"><i class="demo-icon document.alep-icon span">&#xe801;</i> <span class="i-name">document.alep-icon span</span><span class="i-code">0xe801</span></div>
+        <div title="Code: 0xe802" class="the-icons span3"><i class="demo-icon download.alep-icon span">&#xe802;</i> <span class="i-name">download.alep-icon span</span><span class="i-code">0xe802</span></div>
+        <div title="Code: 0xe803" class="the-icons span3"><i class="demo-icon featured.alep-icon span">&#xe803;</i> <span class="i-name">featured.alep-icon span</span><span class="i-code">0xe803</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe804" class="the-icons span3"><i class="demo-icon kontakt.alep-icon span">&#xe804;</i> <span class="i-name">kontakt.alep-icon span</span><span class="i-code">0xe804</span></div>
+        <div title="Code: 0xe805" class="the-icons span3"><i class="demo-icon maschine.alep-icon span">&#xe805;</i> <span class="i-name">maschine.alep-icon span</span><span class="i-code">0xe805</span></div>
+        <div title="Code: 0xe806" class="the-icons span3"><i class="demo-icon nativeinstruments.alep-icon span">&#xe806;</i> <span class="i-name">nativeinstruments.alep-icon span</span><span class="i-code">0xe806</span></div>
+        <div title="Code: 0xe807" class="the-icons span3"><i class="demo-icon glass.alep-icon span">&#xe807;</i> <span class="i-name">glass.alep-icon span</span><span class="i-code">0xe807</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe808" class="the-icons span3"><i class="demo-icon music.alep-icon span">&#xe808;</i> <span class="i-name">music.alep-icon span</span><span class="i-code">0xe808</span></div>
+        <div title="Code: 0xe809" class="the-icons span3"><i class="demo-icon search.alep-icon span">&#xe809;</i> <span class="i-name">search.alep-icon span</span><span class="i-code">0xe809</span></div>
+        <div title="Code: 0xe80a" class="the-icons span3"><i class="demo-icon video.alep-icon span">&#xe80a;</i> <span class="i-name">video.alep-icon span</span><span class="i-code">0xe80a</span></div>
+        <div title="Code: 0xe80b" class="the-icons span3"><i class="demo-icon mail.alep-icon span">&#xe80b;</i> <span class="i-name">mail.alep-icon span</span><span class="i-code">0xe80b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe80c" class="the-icons span3"><i class="demo-icon foobar.alep-icon span">&#xe80c;</i> <span class="i-name">foobar.alep-icon span</span><span class="i-code">0xe80c</span></div>
+        <div title="Code: 0xe820" class="the-icons span3"><i class="demo-icon heart.alep-icon span">&#xe820;</i> <span class="i-name">heart.alep-icon span</span><span class="i-code">0xe820</span></div>
+        <div title="Code: 0xe821" class="the-icons span3"><i class="demo-icon heart-empty.alep-icon span">&#xe821;</i> <span class="i-name">heart-empty.alep-icon span</span><span class="i-code">0xe821</span></div>
+        <div title="Code: 0xe822" class="the-icons span3"><i class="demo-icon star.alep-icon span">&#xe822;</i> <span class="i-name">star.alep-icon span</span><span class="i-code">0xe822</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe823" class="the-icons span3"><i class="demo-icon star-empty.alep-icon span">&#xe823;</i> <span class="i-name">star-empty.alep-icon span</span><span class="i-code">0xe823</span></div>
+        <div title="Code: 0xe824" class="the-icons span3"><i class="demo-icon star-half.alep-icon span">&#xe824;</i> <span class="i-name">star-half.alep-icon span</span><span class="i-code">0xe824</span></div>
+        <div title="Code: 0xe825" class="the-icons span3"><i class="demo-icon user.alep-icon span">&#xe825;</i> <span class="i-name">user.alep-icon span</span><span class="i-code">0xe825</span></div>
+        <div title="Code: 0xe826" class="the-icons span3"><i class="demo-icon users.alep-icon span">&#xe826;</i> <span class="i-name">users.alep-icon span</span><span class="i-code">0xe826</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe827" class="the-icons span3"><i class="demo-icon video-1.alep-icon span">&#xe827;</i> <span class="i-name">video-1.alep-icon span</span><span class="i-code">0xe827</span></div>
+        <div title="Code: 0xe828" class="the-icons span3"><i class="demo-icon videocam.alep-icon span">&#xe828;</i> <span class="i-name">videocam.alep-icon span</span><span class="i-code">0xe828</span></div>
+        <div title="Code: 0xe829" class="the-icons span3"><i class="demo-icon picture.alep-icon span">&#xe829;</i> <span class="i-name">picture.alep-icon span</span><span class="i-code">0xe829</span></div>
+        <div title="Code: 0xe82a" class="the-icons span3"><i class="demo-icon camera.alep-icon span">&#xe82a;</i> <span class="i-name">camera.alep-icon span</span><span class="i-code">0xe82a</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe82b" class="the-icons span3"><i class="demo-icon camera-alt.alep-icon span">&#xe82b;</i> <span class="i-name">camera-alt.alep-icon span</span><span class="i-code">0xe82b</span></div>
+        <div title="Code: 0xe82c" class="the-icons span3"><i class="demo-icon th-large.alep-icon span">&#xe82c;</i> <span class="i-name">th-large.alep-icon span</span><span class="i-code">0xe82c</span></div>
+        <div title="Code: 0xe82d" class="the-icons span3"><i class="demo-icon th.alep-icon span">&#xe82d;</i> <span class="i-name">th.alep-icon span</span><span class="i-code">0xe82d</span></div>
+        <div title="Code: 0xe82e" class="the-icons span3"><i class="demo-icon th-list.alep-icon span">&#xe82e;</i> <span class="i-name">th-list.alep-icon span</span><span class="i-code">0xe82e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe82f" class="the-icons span3"><i class="demo-icon ok.alep-icon span">&#xe82f;</i> <span class="i-name">ok.alep-icon span</span><span class="i-code">0xe82f</span></div>
+        <div title="Code: 0xe833" class="the-icons span3"><i class="demo-icon ok-circled.alep-icon span">&#xe833;</i> <span class="i-name">ok-circled.alep-icon span</span><span class="i-code">0xe833</span></div>
+        <div title="Code: 0xe835" class="the-icons span3"><i class="demo-icon ok-circled2.alep-icon span">&#xe835;</i> <span class="i-name">ok-circled2.alep-icon span</span><span class="i-code">0xe835</span></div>
+        <div title="Code: 0xe836" class="the-icons span3"><i class="demo-icon cancel.alep-icon span">&#xe836;</i> <span class="i-name">cancel.alep-icon span</span><span class="i-code">0xe836</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe837" class="the-icons span3"><i class="demo-icon cancel-circled.alep-icon span">&#xe837;</i> <span class="i-name">cancel-circled.alep-icon span</span><span class="i-code">0xe837</span></div>
+        <div title="Code: 0xe83a" class="the-icons span3"><i class="demo-icon cancel-circled2.alep-icon span">&#xe83a;</i> <span class="i-name">cancel-circled2.alep-icon span</span><span class="i-code">0xe83a</span></div>
+        <div title="Code: 0xe83b" class="the-icons span3"><i class="demo-icon plus.alep-icon span">&#xe83b;</i> <span class="i-name">plus.alep-icon span</span><span class="i-code">0xe83b</span></div>
+        <div title="Code: 0xe83c" class="the-icons span3"><i class="demo-icon plus-circled.alep-icon span">&#xe83c;</i> <span class="i-name">plus-circled.alep-icon span</span><span class="i-code">0xe83c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe83d" class="the-icons span3"><i class="demo-icon minus.alep-icon span">&#xe83d;</i> <span class="i-name">minus.alep-icon span</span><span class="i-code">0xe83d</span></div>
+        <div title="Code: 0xe83e" class="the-icons span3"><i class="demo-icon minus-circled.alep-icon span">&#xe83e;</i> <span class="i-name">minus-circled.alep-icon span</span><span class="i-code">0xe83e</span></div>
+        <div title="Code: 0xe83f" class="the-icons span3"><i class="demo-icon help-circled.alep-icon span">&#xe83f;</i> <span class="i-name">help-circled.alep-icon span</span><span class="i-code">0xe83f</span></div>
+        <div title="Code: 0xe848" class="the-icons span3"><i class="demo-icon info-circled.alep-icon span">&#xe848;</i> <span class="i-name">info-circled.alep-icon span</span><span class="i-code">0xe848</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe849" class="the-icons span3"><i class="demo-icon home.alep-icon span">&#xe849;</i> <span class="i-name">home.alep-icon span</span><span class="i-code">0xe849</span></div>
+        <div title="Code: 0xe84a" class="the-icons span3"><i class="demo-icon link.alep-icon span">&#xe84a;</i> <span class="i-name">link.alep-icon span</span><span class="i-code">0xe84a</span></div>
+        <div title="Code: 0xe84b" class="the-icons span3"><i class="demo-icon attach.alep-icon span">&#xe84b;</i> <span class="i-name">attach.alep-icon span</span><span class="i-code">0xe84b</span></div>
+        <div title="Code: 0xe84c" class="the-icons span3"><i class="demo-icon lock.alep-icon span">&#xe84c;</i> <span class="i-name">lock.alep-icon span</span><span class="i-code">0xe84c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe84d" class="the-icons span3"><i class="demo-icon lock-open.alep-icon span">&#xe84d;</i> <span class="i-name">lock-open.alep-icon span</span><span class="i-code">0xe84d</span></div>
+        <div title="Code: 0xe84e" class="the-icons span3"><i class="demo-icon pin.alep-icon span">&#xe84e;</i> <span class="i-name">pin.alep-icon span</span><span class="i-code">0xe84e</span></div>
+        <div title="Code: 0xe84f" class="the-icons span3"><i class="demo-icon eye.alep-icon span">&#xe84f;</i> <span class="i-name">eye.alep-icon span</span><span class="i-code">0xe84f</span></div>
+        <div title="Code: 0xe850" class="the-icons span3"><i class="demo-icon eye-off.alep-icon span">&#xe850;</i> <span class="i-name">eye-off.alep-icon span</span><span class="i-code">0xe850</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe851" class="the-icons span3"><i class="demo-icon tag.alep-icon span">&#xe851;</i> <span class="i-name">tag.alep-icon span</span><span class="i-code">0xe851</span></div>
+        <div title="Code: 0xe852" class="the-icons span3"><i class="demo-icon tags.alep-icon span">&#xe852;</i> <span class="i-name">tags.alep-icon span</span><span class="i-code">0xe852</span></div>
+        <div title="Code: 0xe853" class="the-icons span3"><i class="demo-icon bookmark.alep-icon span">&#xe853;</i> <span class="i-name">bookmark.alep-icon span</span><span class="i-code">0xe853</span></div>
+        <div title="Code: 0xe854" class="the-icons span3"><i class="demo-icon flag.alep-icon span">&#xe854;</i> <span class="i-name">flag.alep-icon span</span><span class="i-code">0xe854</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe855" class="the-icons span3"><i class="demo-icon thumbs-up.alep-icon span">&#xe855;</i> <span class="i-name">thumbs-up.alep-icon span</span><span class="i-code">0xe855</span></div>
+        <div title="Code: 0xe856" class="the-icons span3"><i class="demo-icon thumbs-down.alep-icon span">&#xe856;</i> <span class="i-name">thumbs-down.alep-icon span</span><span class="i-code">0xe856</span></div>
+        <div title="Code: 0xe857" class="the-icons span3"><i class="demo-icon download-1.alep-icon span">&#xe857;</i> <span class="i-name">download-1.alep-icon span</span><span class="i-code">0xe857</span></div>
+        <div title="Code: 0xe858" class="the-icons span3"><i class="demo-icon upload.alep-icon span">&#xe858;</i> <span class="i-name">upload.alep-icon span</span><span class="i-code">0xe858</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe859" class="the-icons span3"><i class="demo-icon forward.alep-icon span">&#xe859;</i> <span class="i-name">forward.alep-icon span</span><span class="i-code">0xe859</span></div>
+        <div title="Code: 0xe85a" class="the-icons span3"><i class="demo-icon export.alep-icon span">&#xe85a;</i> <span class="i-name">export.alep-icon span</span><span class="i-code">0xe85a</span></div>
+        <div title="Code: 0xe85b" class="the-icons span3"><i class="demo-icon pencil.alep-icon span">&#xe85b;</i> <span class="i-name">pencil.alep-icon span</span><span class="i-code">0xe85b</span></div>
+        <div title="Code: 0xe85c" class="the-icons span3"><i class="demo-icon edit.alep-icon span">&#xe85c;</i> <span class="i-name">edit.alep-icon span</span><span class="i-code">0xe85c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe85d" class="the-icons span3"><i class="demo-icon print.alep-icon span">&#xe85d;</i> <span class="i-name">print.alep-icon span</span><span class="i-code">0xe85d</span></div>
+        <div title="Code: 0xe85e" class="the-icons span3"><i class="demo-icon retweet.alep-icon span">&#xe85e;</i> <span class="i-name">retweet.alep-icon span</span><span class="i-code">0xe85e</span></div>
+        <div title="Code: 0xe85f" class="the-icons span3"><i class="demo-icon comment.alep-icon span">&#xe85f;</i> <span class="i-name">comment.alep-icon span</span><span class="i-code">0xe85f</span></div>
+        <div title="Code: 0xe860" class="the-icons span3"><i class="demo-icon chat.alep-icon span">&#xe860;</i> <span class="i-name">chat.alep-icon span</span><span class="i-code">0xe860</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe861" class="the-icons span3"><i class="demo-icon bell.alep-icon span">&#xe861;</i> <span class="i-name">bell.alep-icon span</span><span class="i-code">0xe861</span></div>
+        <div title="Code: 0xe862" class="the-icons span3"><i class="demo-icon attention.alep-icon span">&#xe862;</i> <span class="i-name">attention.alep-icon span</span><span class="i-code">0xe862</span></div>
+        <div title="Code: 0xe863" class="the-icons span3"><i class="demo-icon attention-circled.alep-icon span">&#xe863;</i> <span class="i-name">attention-circled.alep-icon span</span><span class="i-code">0xe863</span></div>
+        <div title="Code: 0xe864" class="the-icons span3"><i class="demo-icon location.alep-icon span">&#xe864;</i> <span class="i-name">location.alep-icon span</span><span class="i-code">0xe864</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe865" class="the-icons span3"><i class="demo-icon trash-empty.alep-icon span">&#xe865;</i> <span class="i-name">trash-empty.alep-icon span</span><span class="i-code">0xe865</span></div>
+        <div title="Code: 0xe866" class="the-icons span3"><i class="demo-icon doc.alep-icon span">&#xe866;</i> <span class="i-name">doc.alep-icon span</span><span class="i-code">0xe866</span></div>
+        <div title="Code: 0xe867" class="the-icons span3"><i class="demo-icon folder.alep-icon span">&#xe867;</i> <span class="i-name">folder.alep-icon span</span><span class="i-code">0xe867</span></div>
+        <div title="Code: 0xe868" class="the-icons span3"><i class="demo-icon folder-open.alep-icon span">&#xe868;</i> <span class="i-name">folder-open.alep-icon span</span><span class="i-code">0xe868</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe869" class="the-icons span3"><i class="demo-icon phone.alep-icon span">&#xe869;</i> <span class="i-name">phone.alep-icon span</span><span class="i-code">0xe869</span></div>
+        <div title="Code: 0xe86a" class="the-icons span3"><i class="demo-icon cog.alep-icon span">&#xe86a;</i> <span class="i-name">cog.alep-icon span</span><span class="i-code">0xe86a</span></div>
+        <div title="Code: 0xe86b" class="the-icons span3"><i class="demo-icon cog-alt.alep-icon span">&#xe86b;</i> <span class="i-name">cog-alt.alep-icon span</span><span class="i-code">0xe86b</span></div>
+        <div title="Code: 0xe86c" class="the-icons span3"><i class="demo-icon wrench.alep-icon span">&#xe86c;</i> <span class="i-name">wrench.alep-icon span</span><span class="i-code">0xe86c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe86d" class="the-icons span3"><i class="demo-icon basket.alep-icon span">&#xe86d;</i> <span class="i-name">basket.alep-icon span</span><span class="i-code">0xe86d</span></div>
+        <div title="Code: 0xe86e" class="the-icons span3"><i class="demo-icon calendar.alep-icon span">&#xe86e;</i> <span class="i-name">calendar.alep-icon span</span><span class="i-code">0xe86e</span></div>
+        <div title="Code: 0xe86f" class="the-icons span3"><i class="demo-icon login.alep-icon span">&#xe86f;</i> <span class="i-name">login.alep-icon span</span><span class="i-code">0xe86f</span></div>
+        <div title="Code: 0xe870" class="the-icons span3"><i class="demo-icon logout.alep-icon span">&#xe870;</i> <span class="i-name">logout.alep-icon span</span><span class="i-code">0xe870</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe871" class="the-icons span3"><i class="demo-icon volume-off.alep-icon span">&#xe871;</i> <span class="i-name">volume-off.alep-icon span</span><span class="i-code">0xe871</span></div>
+        <div title="Code: 0xe872" class="the-icons span3"><i class="demo-icon volume-down.alep-icon span">&#xe872;</i> <span class="i-name">volume-down.alep-icon span</span><span class="i-code">0xe872</span></div>
+        <div title="Code: 0xe873" class="the-icons span3"><i class="demo-icon volume-up.alep-icon span">&#xe873;</i> <span class="i-name">volume-up.alep-icon span</span><span class="i-code">0xe873</span></div>
+        <div title="Code: 0xe874" class="the-icons span3"><i class="demo-icon headphones.alep-icon span">&#xe874;</i> <span class="i-name">headphones.alep-icon span</span><span class="i-code">0xe874</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe875" class="the-icons span3"><i class="demo-icon clock.alep-icon span">&#xe875;</i> <span class="i-name">clock.alep-icon span</span><span class="i-code">0xe875</span></div>
+        <div title="Code: 0xe876" class="the-icons span3"><i class="demo-icon block.alep-icon span">&#xe876;</i> <span class="i-name">block.alep-icon span</span><span class="i-code">0xe876</span></div>
+        <div title="Code: 0xe877" class="the-icons span3"><i class="demo-icon resize-full.alep-icon span">&#xe877;</i> <span class="i-name">resize-full.alep-icon span</span><span class="i-code">0xe877</span></div>
+        <div title="Code: 0xe878" class="the-icons span3"><i class="demo-icon resize-small.alep-icon span">&#xe878;</i> <span class="i-name">resize-small.alep-icon span</span><span class="i-code">0xe878</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe879" class="the-icons span3"><i class="demo-icon resize-vertical.alep-icon span">&#xe879;</i> <span class="i-name">resize-vertical.alep-icon span</span><span class="i-code">0xe879</span></div>
+        <div title="Code: 0xe87a" class="the-icons span3"><i class="demo-icon resize-horizontal.alep-icon span">&#xe87a;</i> <span class="i-name">resize-horizontal.alep-icon span</span><span class="i-code">0xe87a</span></div>
+        <div title="Code: 0xe87b" class="the-icons span3"><i class="demo-icon zoom-in.alep-icon span">&#xe87b;</i> <span class="i-name">zoom-in.alep-icon span</span><span class="i-code">0xe87b</span></div>
+        <div title="Code: 0xe87c" class="the-icons span3"><i class="demo-icon zoom-out.alep-icon span">&#xe87c;</i> <span class="i-name">zoom-out.alep-icon span</span><span class="i-code">0xe87c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe87d" class="the-icons span3"><i class="demo-icon down-circled2.alep-icon span">&#xe87d;</i> <span class="i-name">down-circled2.alep-icon span</span><span class="i-code">0xe87d</span></div>
+        <div title="Code: 0xe87e" class="the-icons span3"><i class="demo-icon up-circled2.alep-icon span">&#xe87e;</i> <span class="i-name">up-circled2.alep-icon span</span><span class="i-code">0xe87e</span></div>
+        <div title="Code: 0xe87f" class="the-icons span3"><i class="demo-icon down-dir.alep-icon span">&#xe87f;</i> <span class="i-name">down-dir.alep-icon span</span><span class="i-code">0xe87f</span></div>
+        <div title="Code: 0xe880" class="the-icons span3"><i class="demo-icon up-dir.alep-icon span">&#xe880;</i> <span class="i-name">up-dir.alep-icon span</span><span class="i-code">0xe880</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe881" class="the-icons span3"><i class="demo-icon left-dir.alep-icon span">&#xe881;</i> <span class="i-name">left-dir.alep-icon span</span><span class="i-code">0xe881</span></div>
+        <div title="Code: 0xe882" class="the-icons span3"><i class="demo-icon right-dir.alep-icon span">&#xe882;</i> <span class="i-name">right-dir.alep-icon span</span><span class="i-code">0xe882</span></div>
+        <div title="Code: 0xe883" class="the-icons span3"><i class="demo-icon down-open.alep-icon span">&#xe883;</i> <span class="i-name">down-open.alep-icon span</span><span class="i-code">0xe883</span></div>
+        <div title="Code: 0xe884" class="the-icons span3"><i class="demo-icon left-open.alep-icon span">&#xe884;</i> <span class="i-name">left-open.alep-icon span</span><span class="i-code">0xe884</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe885" class="the-icons span3"><i class="demo-icon right-open.alep-icon span">&#xe885;</i> <span class="i-name">right-open.alep-icon span</span><span class="i-code">0xe885</span></div>
+        <div title="Code: 0xe886" class="the-icons span3"><i class="demo-icon up-open.alep-icon span">&#xe886;</i> <span class="i-name">up-open.alep-icon span</span><span class="i-code">0xe886</span></div>
+        <div title="Code: 0xe887" class="the-icons span3"><i class="demo-icon down-big.alep-icon span">&#xe887;</i> <span class="i-name">down-big.alep-icon span</span><span class="i-code">0xe887</span></div>
+        <div title="Code: 0xe888" class="the-icons span3"><i class="demo-icon left-big.alep-icon span">&#xe888;</i> <span class="i-name">left-big.alep-icon span</span><span class="i-code">0xe888</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe889" class="the-icons span3"><i class="demo-icon right-big.alep-icon span">&#xe889;</i> <span class="i-name">right-big.alep-icon span</span><span class="i-code">0xe889</span></div>
+        <div title="Code: 0xe88a" class="the-icons span3"><i class="demo-icon up-big.alep-icon span">&#xe88a;</i> <span class="i-name">up-big.alep-icon span</span><span class="i-code">0xe88a</span></div>
+        <div title="Code: 0xe88b" class="the-icons span3"><i class="demo-icon right-hand.alep-icon span">&#xe88b;</i> <span class="i-name">right-hand.alep-icon span</span><span class="i-code">0xe88b</span></div>
+        <div title="Code: 0xe88c" class="the-icons span3"><i class="demo-icon left-hand.alep-icon span">&#xe88c;</i> <span class="i-name">left-hand.alep-icon span</span><span class="i-code">0xe88c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe88d" class="the-icons span3"><i class="demo-icon up-hand.alep-icon span">&#xe88d;</i> <span class="i-name">up-hand.alep-icon span</span><span class="i-code">0xe88d</span></div>
+        <div title="Code: 0xe88e" class="the-icons span3"><i class="demo-icon down-hand.alep-icon span">&#xe88e;</i> <span class="i-name">down-hand.alep-icon span</span><span class="i-code">0xe88e</span></div>
+        <div title="Code: 0xe88f" class="the-icons span3"><i class="demo-icon cw.alep-icon span">&#xe88f;</i> <span class="i-name">cw.alep-icon span</span><span class="i-code">0xe88f</span></div>
+        <div title="Code: 0xe890" class="the-icons span3"><i class="demo-icon ccw.alep-icon span">&#xe890;</i> <span class="i-name">ccw.alep-icon span</span><span class="i-code">0xe890</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe891" class="the-icons span3"><i class="demo-icon arrows-cw.alep-icon span">&#xe891;</i> <span class="i-name">arrows-cw.alep-icon span</span><span class="i-code">0xe891</span></div>
+        <div title="Code: 0xe892" class="the-icons span3"><i class="demo-icon shuffle.alep-icon span">&#xe892;</i> <span class="i-name">shuffle.alep-icon span</span><span class="i-code">0xe892</span></div>
+        <div title="Code: 0xe893" class="the-icons span3"><i class="demo-icon play.alep-icon span">&#xe893;</i> <span class="i-name">play.alep-icon span</span><span class="i-code">0xe893</span></div>
+        <div title="Code: 0xe894" class="the-icons span3"><i class="demo-icon play-circled2.alep-icon span">&#xe894;</i> <span class="i-name">play-circled2.alep-icon span</span><span class="i-code">0xe894</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe895" class="the-icons span3"><i class="demo-icon stop.alep-icon span">&#xe895;</i> <span class="i-name">stop.alep-icon span</span><span class="i-code">0xe895</span></div>
+        <div title="Code: 0xe896" class="the-icons span3"><i class="demo-icon pause.alep-icon span">&#xe896;</i> <span class="i-name">pause.alep-icon span</span><span class="i-code">0xe896</span></div>
+        <div title="Code: 0xe897" class="the-icons span3"><i class="demo-icon to-end.alep-icon span">&#xe897;</i> <span class="i-name">to-end.alep-icon span</span><span class="i-code">0xe897</span></div>
+        <div title="Code: 0xe898" class="the-icons span3"><i class="demo-icon to-end-alt.alep-icon span">&#xe898;</i> <span class="i-name">to-end-alt.alep-icon span</span><span class="i-code">0xe898</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe899" class="the-icons span3"><i class="demo-icon to-start.alep-icon span">&#xe899;</i> <span class="i-name">to-start.alep-icon span</span><span class="i-code">0xe899</span></div>
+        <div title="Code: 0xe89a" class="the-icons span3"><i class="demo-icon to-start-alt.alep-icon span">&#xe89a;</i> <span class="i-name">to-start-alt.alep-icon span</span><span class="i-code">0xe89a</span></div>
+        <div title="Code: 0xe89b" class="the-icons span3"><i class="demo-icon fast-fw.alep-icon span">&#xe89b;</i> <span class="i-name">fast-fw.alep-icon span</span><span class="i-code">0xe89b</span></div>
+        <div title="Code: 0xe89c" class="the-icons span3"><i class="demo-icon fast-bw.alep-icon span">&#xe89c;</i> <span class="i-name">fast-bw.alep-icon span</span><span class="i-code">0xe89c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe89d" class="the-icons span3"><i class="demo-icon eject.alep-icon span">&#xe89d;</i> <span class="i-name">eject.alep-icon span</span><span class="i-code">0xe89d</span></div>
+        <div title="Code: 0xe89e" class="the-icons span3"><i class="demo-icon target.alep-icon span">&#xe89e;</i> <span class="i-name">target.alep-icon span</span><span class="i-code">0xe89e</span></div>
+        <div title="Code: 0xe89f" class="the-icons span3"><i class="demo-icon signal.alep-icon span">&#xe89f;</i> <span class="i-name">signal.alep-icon span</span><span class="i-code">0xe89f</span></div>
+        <div title="Code: 0xe8a0" class="the-icons span3"><i class="demo-icon award.alep-icon span">&#xe8a0;</i> <span class="i-name">award.alep-icon span</span><span class="i-code">0xe8a0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a1" class="the-icons span3"><i class="demo-icon inbox.alep-icon span">&#xe8a1;</i> <span class="i-name">inbox.alep-icon span</span><span class="i-code">0xe8a1</span></div>
+        <div title="Code: 0xe8a2" class="the-icons span3"><i class="demo-icon globe.alep-icon span">&#xe8a2;</i> <span class="i-name">globe.alep-icon span</span><span class="i-code">0xe8a2</span></div>
+        <div title="Code: 0xe8a3" class="the-icons span3"><i class="demo-icon cloud.alep-icon span">&#xe8a3;</i> <span class="i-name">cloud.alep-icon span</span><span class="i-code">0xe8a3</span></div>
+        <div title="Code: 0xe8a4" class="the-icons span3"><i class="demo-icon flash.alep-icon span">&#xe8a4;</i> <span class="i-name">flash.alep-icon span</span><span class="i-code">0xe8a4</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a5" class="the-icons span3"><i class="demo-icon umbrella.alep-icon span">&#xe8a5;</i> <span class="i-name">umbrella.alep-icon span</span><span class="i-code">0xe8a5</span></div>
+        <div title="Code: 0xe8a6" class="the-icons span3"><i class="demo-icon flight.alep-icon span">&#xe8a6;</i> <span class="i-name">flight.alep-icon span</span><span class="i-code">0xe8a6</span></div>
+        <div title="Code: 0xe8a7" class="the-icons span3"><i class="demo-icon leaf.alep-icon span">&#xe8a7;</i> <span class="i-name">leaf.alep-icon span</span><span class="i-code">0xe8a7</span></div>
+        <div title="Code: 0xe8a8" class="the-icons span3"><i class="demo-icon font.alep-icon span">&#xe8a8;</i> <span class="i-name">font.alep-icon span</span><span class="i-code">0xe8a8</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a9" class="the-icons span3"><i class="demo-icon bold.alep-icon span">&#xe8a9;</i> <span class="i-name">bold.alep-icon span</span><span class="i-code">0xe8a9</span></div>
+        <div title="Code: 0xe8aa" class="the-icons span3"><i class="demo-icon italic.alep-icon span">&#xe8aa;</i> <span class="i-name">italic.alep-icon span</span><span class="i-code">0xe8aa</span></div>
+        <div title="Code: 0xe8ab" class="the-icons span3"><i class="demo-icon text-height.alep-icon span">&#xe8ab;</i> <span class="i-name">text-height.alep-icon span</span><span class="i-code">0xe8ab</span></div>
+        <div title="Code: 0xe8ac" class="the-icons span3"><i class="demo-icon text-width.alep-icon span">&#xe8ac;</i> <span class="i-name">text-width.alep-icon span</span><span class="i-code">0xe8ac</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8ad" class="the-icons span3"><i class="demo-icon align-left.alep-icon span">&#xe8ad;</i> <span class="i-name">align-left.alep-icon span</span><span class="i-code">0xe8ad</span></div>
+        <div title="Code: 0xe8ae" class="the-icons span3"><i class="demo-icon align-center.alep-icon span">&#xe8ae;</i> <span class="i-name">align-center.alep-icon span</span><span class="i-code">0xe8ae</span></div>
+        <div title="Code: 0xe8af" class="the-icons span3"><i class="demo-icon align-right.alep-icon span">&#xe8af;</i> <span class="i-name">align-right.alep-icon span</span><span class="i-code">0xe8af</span></div>
+        <div title="Code: 0xe8b0" class="the-icons span3"><i class="demo-icon align-justify.alep-icon span">&#xe8b0;</i> <span class="i-name">align-justify.alep-icon span</span><span class="i-code">0xe8b0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8b1" class="the-icons span3"><i class="demo-icon list.alep-icon span">&#xe8b1;</i> <span class="i-name">list.alep-icon span</span><span class="i-code">0xe8b1</span></div>
+        <div title="Code: 0xe8b2" class="the-icons span3"><i class="demo-icon indent-left.alep-icon span">&#xe8b2;</i> <span class="i-name">indent-left.alep-icon span</span><span class="i-code">0xe8b2</span></div>
+        <div title="Code: 0xe8b3" class="the-icons span3"><i class="demo-icon indent-right.alep-icon span">&#xe8b3;</i> <span class="i-name">indent-right.alep-icon span</span><span class="i-code">0xe8b3</span></div>
+        <div title="Code: 0xe8b4" class="the-icons span3"><i class="demo-icon scissors.alep-icon span">&#xe8b4;</i> <span class="i-name">scissors.alep-icon span</span><span class="i-code">0xe8b4</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8b5" class="the-icons span3"><i class="demo-icon briefcase.alep-icon span">&#xe8b5;</i> <span class="i-name">briefcase.alep-icon span</span><span class="i-code">0xe8b5</span></div>
+        <div title="Code: 0xe8b6" class="the-icons span3"><i class="demo-icon off.alep-icon span">&#xe8b6;</i> <span class="i-name">off.alep-icon span</span><span class="i-code">0xe8b6</span></div>
+        <div title="Code: 0xe8b7" class="the-icons span3"><i class="demo-icon road.alep-icon span">&#xe8b7;</i> <span class="i-name">road.alep-icon span</span><span class="i-code">0xe8b7</span></div>
+        <div title="Code: 0xe8b8" class="the-icons span3"><i class="demo-icon list-alt.alep-icon span">&#xe8b8;</i> <span class="i-name">list-alt.alep-icon span</span><span class="i-code">0xe8b8</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8b9" class="the-icons span3"><i class="demo-icon qrcode.alep-icon span">&#xe8b9;</i> <span class="i-name">qrcode.alep-icon span</span><span class="i-code">0xe8b9</span></div>
+        <div title="Code: 0xe8ba" class="the-icons span3"><i class="demo-icon barcode.alep-icon span">&#xe8ba;</i> <span class="i-name">barcode.alep-icon span</span><span class="i-code">0xe8ba</span></div>
+        <div title="Code: 0xe8bb" class="the-icons span3"><i class="demo-icon book.alep-icon span">&#xe8bb;</i> <span class="i-name">book.alep-icon span</span><span class="i-code">0xe8bb</span></div>
+        <div title="Code: 0xe8bc" class="the-icons span3"><i class="demo-icon adjust.alep-icon span">&#xe8bc;</i> <span class="i-name">adjust.alep-icon span</span><span class="i-code">0xe8bc</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8bd" class="the-icons span3"><i class="demo-icon tint.alep-icon span">&#xe8bd;</i> <span class="i-name">tint.alep-icon span</span><span class="i-code">0xe8bd</span></div>
+        <div title="Code: 0xe8be" class="the-icons span3"><i class="demo-icon check.alep-icon span">&#xe8be;</i> <span class="i-name">check.alep-icon span</span><span class="i-code">0xe8be</span></div>
+        <div title="Code: 0xe8bf" class="the-icons span3"><i class="demo-icon asterisk.alep-icon span">&#xe8bf;</i> <span class="i-name">asterisk.alep-icon span</span><span class="i-code">0xe8bf</span></div>
+        <div title="Code: 0xe8c0" class="the-icons span3"><i class="demo-icon gift.alep-icon span">&#xe8c0;</i> <span class="i-name">gift.alep-icon span</span><span class="i-code">0xe8c0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8c1" class="the-icons span3"><i class="demo-icon fire.alep-icon span">&#xe8c1;</i> <span class="i-name">fire.alep-icon span</span><span class="i-code">0xe8c1</span></div>
+        <div title="Code: 0xe8c2" class="the-icons span3"><i class="demo-icon magnet.alep-icon span">&#xe8c2;</i> <span class="i-name">magnet.alep-icon span</span><span class="i-code">0xe8c2</span></div>
+        <div title="Code: 0xe8c3" class="the-icons span3"><i class="demo-icon chart-bar.alep-icon span">&#xe8c3;</i> <span class="i-name">chart-bar.alep-icon span</span><span class="i-code">0xe8c3</span></div>
+        <div title="Code: 0xe8c4" class="the-icons span3"><i class="demo-icon credit-card.alep-icon span">&#xe8c4;</i> <span class="i-name">credit-card.alep-icon span</span><span class="i-code">0xe8c4</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8c5" class="the-icons span3"><i class="demo-icon floppy.alep-icon span">&#xe8c5;</i> <span class="i-name">floppy.alep-icon span</span><span class="i-code">0xe8c5</span></div>
+        <div title="Code: 0xe8c6" class="the-icons span3"><i class="demo-icon megaphone.alep-icon span">&#xe8c6;</i> <span class="i-name">megaphone.alep-icon span</span><span class="i-code">0xe8c6</span></div>
+        <div title="Code: 0xe8c7" class="the-icons span3"><i class="demo-icon key.alep-icon span">&#xe8c7;</i> <span class="i-name">key.alep-icon span</span><span class="i-code">0xe8c7</span></div>
+        <div title="Code: 0xe8c8" class="the-icons span3"><i class="demo-icon truck.alep-icon span">&#xe8c8;</i> <span class="i-name">truck.alep-icon span</span><span class="i-code">0xe8c8</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8c9" class="the-icons span3"><i class="demo-icon hammer.alep-icon span">&#xe8c9;</i> <span class="i-name">hammer.alep-icon span</span><span class="i-code">0xe8c9</span></div>
+        <div title="Code: 0xe8ca" class="the-icons span3"><i class="demo-icon lemon.alep-icon span">&#xe8ca;</i> <span class="i-name">lemon.alep-icon span</span><span class="i-code">0xe8ca</span></div>
+        <div title="Code: 0xf047" class="the-icons span3"><i class="demo-icon move.alep-icon span">&#xf047;</i> <span class="i-name">move.alep-icon span</span><span class="i-code">0xf047</span></div>
+        <div title="Code: 0xf08e" class="the-icons span3"><i class="demo-icon link-ext.alep-icon span">&#xf08e;</i> <span class="i-name">link-ext.alep-icon span</span><span class="i-code">0xf08e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf096" class="the-icons span3"><i class="demo-icon check-empty.alep-icon span">&#xf096;</i> <span class="i-name">check-empty.alep-icon span</span><span class="i-code">0xf096</span></div>
+        <div title="Code: 0xf097" class="the-icons span3"><i class="demo-icon bookmark-empty.alep-icon span">&#xf097;</i> <span class="i-name">bookmark-empty.alep-icon span</span><span class="i-code">0xf097</span></div>
+        <div title="Code: 0xf098" class="the-icons span3"><i class="demo-icon phone-squared.alep-icon span">&#xf098;</i> <span class="i-name">phone-squared.alep-icon span</span><span class="i-code">0xf098</span></div>
+        <div title="Code: 0xf099" class="the-icons span3"><i class="demo-icon twitter.alep-icon span">&#xf099;</i> <span class="i-name">twitter.alep-icon span</span><span class="i-code">0xf099</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf09a" class="the-icons span3"><i class="demo-icon facebook.alep-icon span">&#xf09a;</i> <span class="i-name">facebook.alep-icon span</span><span class="i-code">0xf09a</span></div>
+        <div title="Code: 0xf09b" class="the-icons span3"><i class="demo-icon github-circled.alep-icon span">&#xf09b;</i> <span class="i-name">github-circled.alep-icon span</span><span class="i-code">0xf09b</span></div>
+        <div title="Code: 0xf09e" class="the-icons span3"><i class="demo-icon rss.alep-icon span">&#xf09e;</i> <span class="i-name">rss.alep-icon span</span><span class="i-code">0xf09e</span></div>
+        <div title="Code: 0xf0a0" class="the-icons span3"><i class="demo-icon hdd.alep-icon span">&#xf0a0;</i> <span class="i-name">hdd.alep-icon span</span><span class="i-code">0xf0a0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0a3" class="the-icons span3"><i class="demo-icon certificate.alep-icon span">&#xf0a3;</i> <span class="i-name">certificate.alep-icon span</span><span class="i-code">0xf0a3</span></div>
+        <div title="Code: 0xf0a8" class="the-icons span3"><i class="demo-icon left-circled.alep-icon span">&#xf0a8;</i> <span class="i-name">left-circled.alep-icon span</span><span class="i-code">0xf0a8</span></div>
+        <div title="Code: 0xf0a9" class="the-icons span3"><i class="demo-icon right-circled.alep-icon span">&#xf0a9;</i> <span class="i-name">right-circled.alep-icon span</span><span class="i-code">0xf0a9</span></div>
+        <div title="Code: 0xf0aa" class="the-icons span3"><i class="demo-icon up-circled.alep-icon span">&#xf0aa;</i> <span class="i-name">up-circled.alep-icon span</span><span class="i-code">0xf0aa</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0ab" class="the-icons span3"><i class="demo-icon down-circled.alep-icon span">&#xf0ab;</i> <span class="i-name">down-circled.alep-icon span</span><span class="i-code">0xf0ab</span></div>
+        <div title="Code: 0xf0ae" class="the-icons span3"><i class="demo-icon tasks.alep-icon span">&#xf0ae;</i> <span class="i-name">tasks.alep-icon span</span><span class="i-code">0xf0ae</span></div>
+        <div title="Code: 0xf0b0" class="the-icons span3"><i class="demo-icon filter.alep-icon span">&#xf0b0;</i> <span class="i-name">filter.alep-icon span</span><span class="i-code">0xf0b0</span></div>
+        <div title="Code: 0xf0b2" class="the-icons span3"><i class="demo-icon resize-full-alt.alep-icon span">&#xf0b2;</i> <span class="i-name">resize-full-alt.alep-icon span</span><span class="i-code">0xf0b2</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0c3" class="the-icons span3"><i class="demo-icon beaker.alep-icon span">&#xf0c3;</i> <span class="i-name">beaker.alep-icon span</span><span class="i-code">0xf0c3</span></div>
+        <div title="Code: 0xf0c5" class="the-icons span3"><i class="demo-icon docs.alep-icon span">&#xf0c5;</i> <span class="i-name">docs.alep-icon span</span><span class="i-code">0xf0c5</span></div>
+        <div title="Code: 0xf0c8" class="the-icons span3"><i class="demo-icon blank.alep-icon span">&#xf0c8;</i> <span class="i-name">blank.alep-icon span</span><span class="i-code">0xf0c8</span></div>
+        <div title="Code: 0xf0c9" class="the-icons span3"><i class="demo-icon menu.alep-icon span">&#xf0c9;</i> <span class="i-name">menu.alep-icon span</span><span class="i-code">0xf0c9</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0ca" class="the-icons span3"><i class="demo-icon list-bullet.alep-icon span">&#xf0ca;</i> <span class="i-name">list-bullet.alep-icon span</span><span class="i-code">0xf0ca</span></div>
+        <div title="Code: 0xf0cb" class="the-icons span3"><i class="demo-icon list-numbered.alep-icon span">&#xf0cb;</i> <span class="i-name">list-numbered.alep-icon span</span><span class="i-code">0xf0cb</span></div>
+        <div title="Code: 0xf0cc" class="the-icons span3"><i class="demo-icon strike.alep-icon span">&#xf0cc;</i> <span class="i-name">strike.alep-icon span</span><span class="i-code">0xf0cc</span></div>
+        <div title="Code: 0xf0cd" class="the-icons span3"><i class="demo-icon underline.alep-icon span">&#xf0cd;</i> <span class="i-name">underline.alep-icon span</span><span class="i-code">0xf0cd</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0ce" class="the-icons span3"><i class="demo-icon table.alep-icon span">&#xf0ce;</i> <span class="i-name">table.alep-icon span</span><span class="i-code">0xf0ce</span></div>
+        <div title="Code: 0xf0d0" class="the-icons span3"><i class="demo-icon magic.alep-icon span">&#xf0d0;</i> <span class="i-name">magic.alep-icon span</span><span class="i-code">0xf0d0</span></div>
+        <div title="Code: 0xf0d2" class="the-icons span3"><i class="demo-icon pinterest-circled.alep-icon span">&#xf0d2;</i> <span class="i-name">pinterest-circled.alep-icon span</span><span class="i-code">0xf0d2</span></div>
+        <div title="Code: 0xf0d3" class="the-icons span3"><i class="demo-icon pinterest-squared.alep-icon span">&#xf0d3;</i> <span class="i-name">pinterest-squared.alep-icon span</span><span class="i-code">0xf0d3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0d4" class="the-icons span3"><i class="demo-icon gplus-squared.alep-icon span">&#xf0d4;</i> <span class="i-name">gplus-squared.alep-icon span</span><span class="i-code">0xf0d4</span></div>
+        <div title="Code: 0xf0d5" class="the-icons span3"><i class="demo-icon gplus.alep-icon span">&#xf0d5;</i> <span class="i-name">gplus.alep-icon span</span><span class="i-code">0xf0d5</span></div>
+        <div title="Code: 0xf0d6" class="the-icons span3"><i class="demo-icon money.alep-icon span">&#xf0d6;</i> <span class="i-name">money.alep-icon span</span><span class="i-code">0xf0d6</span></div>
+        <div title="Code: 0xf0db" class="the-icons span3"><i class="demo-icon columns.alep-icon span">&#xf0db;</i> <span class="i-name">columns.alep-icon span</span><span class="i-code">0xf0db</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0dc" class="the-icons span3"><i class="demo-icon sort.alep-icon span">&#xf0dc;</i> <span class="i-name">sort.alep-icon span</span><span class="i-code">0xf0dc</span></div>
+        <div title="Code: 0xf0dd" class="the-icons span3"><i class="demo-icon sort-down.alep-icon span">&#xf0dd;</i> <span class="i-name">sort-down.alep-icon span</span><span class="i-code">0xf0dd</span></div>
+        <div title="Code: 0xf0de" class="the-icons span3"><i class="demo-icon sort-up.alep-icon span">&#xf0de;</i> <span class="i-name">sort-up.alep-icon span</span><span class="i-code">0xf0de</span></div>
+        <div title="Code: 0xf0e0" class="the-icons span3"><i class="demo-icon mail-alt.alep-icon span">&#xf0e0;</i> <span class="i-name">mail-alt.alep-icon span</span><span class="i-code">0xf0e0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0e1" class="the-icons span3"><i class="demo-icon linkedin.alep-icon span">&#xf0e1;</i> <span class="i-name">linkedin.alep-icon span</span><span class="i-code">0xf0e1</span></div>
+        <div title="Code: 0xf0e4" class="the-icons span3"><i class="demo-icon gauge.alep-icon span">&#xf0e4;</i> <span class="i-name">gauge.alep-icon span</span><span class="i-code">0xf0e4</span></div>
+        <div title="Code: 0xf0e5" class="the-icons span3"><i class="demo-icon comment-empty.alep-icon span">&#xf0e5;</i> <span class="i-name">comment-empty.alep-icon span</span><span class="i-code">0xf0e5</span></div>
+        <div title="Code: 0xf0e6" class="the-icons span3"><i class="demo-icon chat-empty.alep-icon span">&#xf0e6;</i> <span class="i-name">chat-empty.alep-icon span</span><span class="i-code">0xf0e6</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0e8" class="the-icons span3"><i class="demo-icon sitemap.alep-icon span">&#xf0e8;</i> <span class="i-name">sitemap.alep-icon span</span><span class="i-code">0xf0e8</span></div>
+        <div title="Code: 0xf0ea" class="the-icons span3"><i class="demo-icon paste.alep-icon span">&#xf0ea;</i> <span class="i-name">paste.alep-icon span</span><span class="i-code">0xf0ea</span></div>
+        <div title="Code: 0xf0eb" class="the-icons span3"><i class="demo-icon lightbulb.alep-icon span">&#xf0eb;</i> <span class="i-name">lightbulb.alep-icon span</span><span class="i-code">0xf0eb</span></div>
+        <div title="Code: 0xf0ec" class="the-icons span3"><i class="demo-icon exchange.alep-icon span">&#xf0ec;</i> <span class="i-name">exchange.alep-icon span</span><span class="i-code">0xf0ec</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0ed" class="the-icons span3"><i class="demo-icon download-cloud.alep-icon span">&#xf0ed;</i> <span class="i-name">download-cloud.alep-icon span</span><span class="i-code">0xf0ed</span></div>
+        <div title="Code: 0xf0ee" class="the-icons span3"><i class="demo-icon upload-cloud.alep-icon span">&#xf0ee;</i> <span class="i-name">upload-cloud.alep-icon span</span><span class="i-code">0xf0ee</span></div>
+        <div title="Code: 0xf0f0" class="the-icons span3"><i class="demo-icon user-md.alep-icon span">&#xf0f0;</i> <span class="i-name">user-md.alep-icon span</span><span class="i-code">0xf0f0</span></div>
+        <div title="Code: 0xf0f1" class="the-icons span3"><i class="demo-icon stethoscope.alep-icon span">&#xf0f1;</i> <span class="i-name">stethoscope.alep-icon span</span><span class="i-code">0xf0f1</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0f2" class="the-icons span3"><i class="demo-icon suitcase.alep-icon span">&#xf0f2;</i> <span class="i-name">suitcase.alep-icon span</span><span class="i-code">0xf0f2</span></div>
+        <div title="Code: 0xf0f3" class="the-icons span3"><i class="demo-icon bell-alt.alep-icon span">&#xf0f3;</i> <span class="i-name">bell-alt.alep-icon span</span><span class="i-code">0xf0f3</span></div>
+        <div title="Code: 0xf0f4" class="the-icons span3"><i class="demo-icon coffee.alep-icon span">&#xf0f4;</i> <span class="i-name">coffee.alep-icon span</span><span class="i-code">0xf0f4</span></div>
+        <div title="Code: 0xf0f5" class="the-icons span3"><i class="demo-icon food.alep-icon span">&#xf0f5;</i> <span class="i-name">food.alep-icon span</span><span class="i-code">0xf0f5</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0f6" class="the-icons span3"><i class="demo-icon doc-text.alep-icon span">&#xf0f6;</i> <span class="i-name">doc-text.alep-icon span</span><span class="i-code">0xf0f6</span></div>
+        <div title="Code: 0xf0f7" class="the-icons span3"><i class="demo-icon building.alep-icon span">&#xf0f7;</i> <span class="i-name">building.alep-icon span</span><span class="i-code">0xf0f7</span></div>
+        <div title="Code: 0xf0f8" class="the-icons span3"><i class="demo-icon hospital.alep-icon span">&#xf0f8;</i> <span class="i-name">hospital.alep-icon span</span><span class="i-code">0xf0f8</span></div>
+        <div title="Code: 0xf0f9" class="the-icons span3"><i class="demo-icon ambulance.alep-icon span">&#xf0f9;</i> <span class="i-name">ambulance.alep-icon span</span><span class="i-code">0xf0f9</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0fa" class="the-icons span3"><i class="demo-icon medkit.alep-icon span">&#xf0fa;</i> <span class="i-name">medkit.alep-icon span</span><span class="i-code">0xf0fa</span></div>
+        <div title="Code: 0xf0fb" class="the-icons span3"><i class="demo-icon fighter-jet.alep-icon span">&#xf0fb;</i> <span class="i-name">fighter-jet.alep-icon span</span><span class="i-code">0xf0fb</span></div>
+        <div title="Code: 0xf0fc" class="the-icons span3"><i class="demo-icon beer.alep-icon span">&#xf0fc;</i> <span class="i-name">beer.alep-icon span</span><span class="i-code">0xf0fc</span></div>
+        <div title="Code: 0xf0fd" class="the-icons span3"><i class="demo-icon h-sigh.alep-icon span">&#xf0fd;</i> <span class="i-name">h-sigh.alep-icon span</span><span class="i-code">0xf0fd</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf0fe" class="the-icons span3"><i class="demo-icon plus-squared.alep-icon span">&#xf0fe;</i> <span class="i-name">plus-squared.alep-icon span</span><span class="i-code">0xf0fe</span></div>
+        <div title="Code: 0xf100" class="the-icons span3"><i class="demo-icon angle-double-left.alep-icon span">&#xf100;</i> <span class="i-name">angle-double-left.alep-icon span</span><span class="i-code">0xf100</span></div>
+        <div title="Code: 0xf101" class="the-icons span3"><i class="demo-icon angle-double-right.alep-icon span">&#xf101;</i> <span class="i-name">angle-double-right.alep-icon span</span><span class="i-code">0xf101</span></div>
+        <div title="Code: 0xf102" class="the-icons span3"><i class="demo-icon angle-double-up.alep-icon span">&#xf102;</i> <span class="i-name">angle-double-up.alep-icon span</span><span class="i-code">0xf102</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf103" class="the-icons span3"><i class="demo-icon angle-double-down.alep-icon span">&#xf103;</i> <span class="i-name">angle-double-down.alep-icon span</span><span class="i-code">0xf103</span></div>
+        <div title="Code: 0xf104" class="the-icons span3"><i class="demo-icon angle-left.alep-icon span">&#xf104;</i> <span class="i-name">angle-left.alep-icon span</span><span class="i-code">0xf104</span></div>
+        <div title="Code: 0xf105" class="the-icons span3"><i class="demo-icon angle-right.alep-icon span">&#xf105;</i> <span class="i-name">angle-right.alep-icon span</span><span class="i-code">0xf105</span></div>
+        <div title="Code: 0xf106" class="the-icons span3"><i class="demo-icon angle-up.alep-icon span">&#xf106;</i> <span class="i-name">angle-up.alep-icon span</span><span class="i-code">0xf106</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf107" class="the-icons span3"><i class="demo-icon angle-down.alep-icon span">&#xf107;</i> <span class="i-name">angle-down.alep-icon span</span><span class="i-code">0xf107</span></div>
+        <div title="Code: 0xf108" class="the-icons span3"><i class="demo-icon desktop.alep-icon span">&#xf108;</i> <span class="i-name">desktop.alep-icon span</span><span class="i-code">0xf108</span></div>
+        <div title="Code: 0xf109" class="the-icons span3"><i class="demo-icon laptop.alep-icon span">&#xf109;</i> <span class="i-name">laptop.alep-icon span</span><span class="i-code">0xf109</span></div>
+        <div title="Code: 0xf10a" class="the-icons span3"><i class="demo-icon tablet.alep-icon span">&#xf10a;</i> <span class="i-name">tablet.alep-icon span</span><span class="i-code">0xf10a</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf10b" class="the-icons span3"><i class="demo-icon mobile.alep-icon span">&#xf10b;</i> <span class="i-name">mobile.alep-icon span</span><span class="i-code">0xf10b</span></div>
+        <div title="Code: 0xf10c" class="the-icons span3"><i class="demo-icon circle-empty.alep-icon span">&#xf10c;</i> <span class="i-name">circle-empty.alep-icon span</span><span class="i-code">0xf10c</span></div>
+        <div title="Code: 0xf10d" class="the-icons span3"><i class="demo-icon quote-left.alep-icon span">&#xf10d;</i> <span class="i-name">quote-left.alep-icon span</span><span class="i-code">0xf10d</span></div>
+        <div title="Code: 0xf10e" class="the-icons span3"><i class="demo-icon quote-right.alep-icon span">&#xf10e;</i> <span class="i-name">quote-right.alep-icon span</span><span class="i-code">0xf10e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf110" class="the-icons span3"><i class="demo-icon spinner.alep-icon span">&#xf110;</i> <span class="i-name">spinner.alep-icon span</span><span class="i-code">0xf110</span></div>
+        <div title="Code: 0xf111" class="the-icons span3"><i class="demo-icon circle.alep-icon span">&#xf111;</i> <span class="i-name">circle.alep-icon span</span><span class="i-code">0xf111</span></div>
+        <div title="Code: 0xf112" class="the-icons span3"><i class="demo-icon reply.alep-icon span">&#xf112;</i> <span class="i-name">reply.alep-icon span</span><span class="i-code">0xf112</span></div>
+        <div title="Code: 0xf113" class="the-icons span3"><i class="demo-icon github.alep-icon span">&#xf113;</i> <span class="i-name">github.alep-icon span</span><span class="i-code">0xf113</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf114" class="the-icons span3"><i class="demo-icon folder-empty.alep-icon span">&#xf114;</i> <span class="i-name">folder-empty.alep-icon span</span><span class="i-code">0xf114</span></div>
+        <div title="Code: 0xf115" class="the-icons span3"><i class="demo-icon folder-open-empty.alep-icon span">&#xf115;</i> <span class="i-name">folder-open-empty.alep-icon span</span><span class="i-code">0xf115</span></div>
+        <div title="Code: 0xf118" class="the-icons span3"><i class="demo-icon smile.alep-icon span">&#xf118;</i> <span class="i-name">smile.alep-icon span</span><span class="i-code">0xf118</span></div>
+        <div title="Code: 0xf119" class="the-icons span3"><i class="demo-icon frown.alep-icon span">&#xf119;</i> <span class="i-name">frown.alep-icon span</span><span class="i-code">0xf119</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf11a" class="the-icons span3"><i class="demo-icon meh.alep-icon span">&#xf11a;</i> <span class="i-name">meh.alep-icon span</span><span class="i-code">0xf11a</span></div>
+        <div title="Code: 0xf11b" class="the-icons span3"><i class="demo-icon gamepad.alep-icon span">&#xf11b;</i> <span class="i-name">gamepad.alep-icon span</span><span class="i-code">0xf11b</span></div>
+        <div title="Code: 0xf11c" class="the-icons span3"><i class="demo-icon keyboard.alep-icon span">&#xf11c;</i> <span class="i-name">keyboard.alep-icon span</span><span class="i-code">0xf11c</span></div>
+        <div title="Code: 0xf11d" class="the-icons span3"><i class="demo-icon flag-empty.alep-icon span">&#xf11d;</i> <span class="i-name">flag-empty.alep-icon span</span><span class="i-code">0xf11d</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf11e" class="the-icons span3"><i class="demo-icon flag-checkered.alep-icon span">&#xf11e;</i> <span class="i-name">flag-checkered.alep-icon span</span><span class="i-code">0xf11e</span></div>
+        <div title="Code: 0xf120" class="the-icons span3"><i class="demo-icon terminal.alep-icon span">&#xf120;</i> <span class="i-name">terminal.alep-icon span</span><span class="i-code">0xf120</span></div>
+        <div title="Code: 0xf121" class="the-icons span3"><i class="demo-icon code.alep-icon span">&#xf121;</i> <span class="i-name">code.alep-icon span</span><span class="i-code">0xf121</span></div>
+        <div title="Code: 0xf122" class="the-icons span3"><i class="demo-icon reply-all.alep-icon span">&#xf122;</i> <span class="i-name">reply-all.alep-icon span</span><span class="i-code">0xf122</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf123" class="the-icons span3"><i class="demo-icon star-half-alt.alep-icon span">&#xf123;</i> <span class="i-name">star-half-alt.alep-icon span</span><span class="i-code">0xf123</span></div>
+        <div title="Code: 0xf124" class="the-icons span3"><i class="demo-icon direction.alep-icon span">&#xf124;</i> <span class="i-name">direction.alep-icon span</span><span class="i-code">0xf124</span></div>
+        <div title="Code: 0xf125" class="the-icons span3"><i class="demo-icon crop.alep-icon span">&#xf125;</i> <span class="i-name">crop.alep-icon span</span><span class="i-code">0xf125</span></div>
+        <div title="Code: 0xf126" class="the-icons span3"><i class="demo-icon fork.alep-icon span">&#xf126;</i> <span class="i-name">fork.alep-icon span</span><span class="i-code">0xf126</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf127" class="the-icons span3"><i class="demo-icon unlink.alep-icon span">&#xf127;</i> <span class="i-name">unlink.alep-icon span</span><span class="i-code">0xf127</span></div>
+        <div title="Code: 0xf128" class="the-icons span3"><i class="demo-icon help.alep-icon span">&#xf128;</i> <span class="i-name">help.alep-icon span</span><span class="i-code">0xf128</span></div>
+        <div title="Code: 0xf129" class="the-icons span3"><i class="demo-icon info.alep-icon span">&#xf129;</i> <span class="i-name">info.alep-icon span</span><span class="i-code">0xf129</span></div>
+        <div title="Code: 0xf12a" class="the-icons span3"><i class="demo-icon attention-alt.alep-icon span">&#xf12a;</i> <span class="i-name">attention-alt.alep-icon span</span><span class="i-code">0xf12a</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf12b" class="the-icons span3"><i class="demo-icon superscript.alep-icon span">&#xf12b;</i> <span class="i-name">superscript.alep-icon span</span><span class="i-code">0xf12b</span></div>
+        <div title="Code: 0xf12c" class="the-icons span3"><i class="demo-icon subscript.alep-icon span">&#xf12c;</i> <span class="i-name">subscript.alep-icon span</span><span class="i-code">0xf12c</span></div>
+        <div title="Code: 0xf12d" class="the-icons span3"><i class="demo-icon eraser.alep-icon span">&#xf12d;</i> <span class="i-name">eraser.alep-icon span</span><span class="i-code">0xf12d</span></div>
+        <div title="Code: 0xf12e" class="the-icons span3"><i class="demo-icon puzzle.alep-icon span">&#xf12e;</i> <span class="i-name">puzzle.alep-icon span</span><span class="i-code">0xf12e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf130" class="the-icons span3"><i class="demo-icon mic.alep-icon span">&#xf130;</i> <span class="i-name">mic.alep-icon span</span><span class="i-code">0xf130</span></div>
+        <div title="Code: 0xf131" class="the-icons span3"><i class="demo-icon mute.alep-icon span">&#xf131;</i> <span class="i-name">mute.alep-icon span</span><span class="i-code">0xf131</span></div>
+        <div title="Code: 0xf132" class="the-icons span3"><i class="demo-icon shield.alep-icon span">&#xf132;</i> <span class="i-name">shield.alep-icon span</span><span class="i-code">0xf132</span></div>
+        <div title="Code: 0xf133" class="the-icons span3"><i class="demo-icon calendar-empty.alep-icon span">&#xf133;</i> <span class="i-name">calendar-empty.alep-icon span</span><span class="i-code">0xf133</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf134" class="the-icons span3"><i class="demo-icon extinguisher.alep-icon span">&#xf134;</i> <span class="i-name">extinguisher.alep-icon span</span><span class="i-code">0xf134</span></div>
+        <div title="Code: 0xf135" class="the-icons span3"><i class="demo-icon rocket.alep-icon span">&#xf135;</i> <span class="i-name">rocket.alep-icon span</span><span class="i-code">0xf135</span></div>
+        <div title="Code: 0xf136" class="the-icons span3"><i class="demo-icon maxcdn.alep-icon span">&#xf136;</i> <span class="i-name">maxcdn.alep-icon span</span><span class="i-code">0xf136</span></div>
+        <div title="Code: 0xf137" class="the-icons span3"><i class="demo-icon angle-circled-left.alep-icon span">&#xf137;</i> <span class="i-name">angle-circled-left.alep-icon span</span><span class="i-code">0xf137</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf138" class="the-icons span3"><i class="demo-icon angle-circled-right.alep-icon span">&#xf138;</i> <span class="i-name">angle-circled-right.alep-icon span</span><span class="i-code">0xf138</span></div>
+        <div title="Code: 0xf139" class="the-icons span3"><i class="demo-icon angle-circled-up.alep-icon span">&#xf139;</i> <span class="i-name">angle-circled-up.alep-icon span</span><span class="i-code">0xf139</span></div>
+        <div title="Code: 0xf13a" class="the-icons span3"><i class="demo-icon angle-circled-down.alep-icon span">&#xf13a;</i> <span class="i-name">angle-circled-down.alep-icon span</span><span class="i-code">0xf13a</span></div>
+        <div title="Code: 0xf13b" class="the-icons span3"><i class="demo-icon html5.alep-icon span">&#xf13b;</i> <span class="i-name">html5.alep-icon span</span><span class="i-code">0xf13b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf13c" class="the-icons span3"><i class="demo-icon css3.alep-icon span">&#xf13c;</i> <span class="i-name">css3.alep-icon span</span><span class="i-code">0xf13c</span></div>
+        <div title="Code: 0xf13d" class="the-icons span3"><i class="demo-icon anchor.alep-icon span">&#xf13d;</i> <span class="i-name">anchor.alep-icon span</span><span class="i-code">0xf13d</span></div>
+        <div title="Code: 0xf13e" class="the-icons span3"><i class="demo-icon lock-open-alt.alep-icon span">&#xf13e;</i> <span class="i-name">lock-open-alt.alep-icon span</span><span class="i-code">0xf13e</span></div>
+        <div title="Code: 0xf140" class="the-icons span3"><i class="demo-icon bullseye.alep-icon span">&#xf140;</i> <span class="i-name">bullseye.alep-icon span</span><span class="i-code">0xf140</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf141" class="the-icons span3"><i class="demo-icon ellipsis.alep-icon span">&#xf141;</i> <span class="i-name">ellipsis.alep-icon span</span><span class="i-code">0xf141</span></div>
+        <div title="Code: 0xf142" class="the-icons span3"><i class="demo-icon ellipsis-vert.alep-icon span">&#xf142;</i> <span class="i-name">ellipsis-vert.alep-icon span</span><span class="i-code">0xf142</span></div>
+        <div title="Code: 0xf143" class="the-icons span3"><i class="demo-icon rss-squared.alep-icon span">&#xf143;</i> <span class="i-name">rss-squared.alep-icon span</span><span class="i-code">0xf143</span></div>
+        <div title="Code: 0xf144" class="the-icons span3"><i class="demo-icon play-circled.alep-icon span">&#xf144;</i> <span class="i-name">play-circled.alep-icon span</span><span class="i-code">0xf144</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf145" class="the-icons span3"><i class="demo-icon ticket.alep-icon span">&#xf145;</i> <span class="i-name">ticket.alep-icon span</span><span class="i-code">0xf145</span></div>
+        <div title="Code: 0xf146" class="the-icons span3"><i class="demo-icon minus-squared.alep-icon span">&#xf146;</i> <span class="i-name">minus-squared.alep-icon span</span><span class="i-code">0xf146</span></div>
+        <div title="Code: 0xf147" class="the-icons span3"><i class="demo-icon minus-squared-alt.alep-icon span">&#xf147;</i> <span class="i-name">minus-squared-alt.alep-icon span</span><span class="i-code">0xf147</span></div>
+        <div title="Code: 0xf148" class="the-icons span3"><i class="demo-icon level-up.alep-icon span">&#xf148;</i> <span class="i-name">level-up.alep-icon span</span><span class="i-code">0xf148</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf149" class="the-icons span3"><i class="demo-icon level-down.alep-icon span">&#xf149;</i> <span class="i-name">level-down.alep-icon span</span><span class="i-code">0xf149</span></div>
+        <div title="Code: 0xf14a" class="the-icons span3"><i class="demo-icon ok-squared.alep-icon span">&#xf14a;</i> <span class="i-name">ok-squared.alep-icon span</span><span class="i-code">0xf14a</span></div>
+        <div title="Code: 0xf14b" class="the-icons span3"><i class="demo-icon pencil-squared.alep-icon span">&#xf14b;</i> <span class="i-name">pencil-squared.alep-icon span</span><span class="i-code">0xf14b</span></div>
+        <div title="Code: 0xf14c" class="the-icons span3"><i class="demo-icon link-ext-alt.alep-icon span">&#xf14c;</i> <span class="i-name">link-ext-alt.alep-icon span</span><span class="i-code">0xf14c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf14d" class="the-icons span3"><i class="demo-icon export-alt.alep-icon span">&#xf14d;</i> <span class="i-name">export-alt.alep-icon span</span><span class="i-code">0xf14d</span></div>
+        <div title="Code: 0xf14e" class="the-icons span3"><i class="demo-icon compass.alep-icon span">&#xf14e;</i> <span class="i-name">compass.alep-icon span</span><span class="i-code">0xf14e</span></div>
+        <div title="Code: 0xf150" class="the-icons span3"><i class="demo-icon expand.alep-icon span">&#xf150;</i> <span class="i-name">expand.alep-icon span</span><span class="i-code">0xf150</span></div>
+        <div title="Code: 0xf151" class="the-icons span3"><i class="demo-icon collapse.alep-icon span">&#xf151;</i> <span class="i-name">collapse.alep-icon span</span><span class="i-code">0xf151</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf152" class="the-icons span3"><i class="demo-icon expand-right.alep-icon span">&#xf152;</i> <span class="i-name">expand-right.alep-icon span</span><span class="i-code">0xf152</span></div>
+        <div title="Code: 0xf153" class="the-icons span3"><i class="demo-icon euro.alep-icon span">&#xf153;</i> <span class="i-name">euro.alep-icon span</span><span class="i-code">0xf153</span></div>
+        <div title="Code: 0xf154" class="the-icons span3"><i class="demo-icon pound.alep-icon span">&#xf154;</i> <span class="i-name">pound.alep-icon span</span><span class="i-code">0xf154</span></div>
+        <div title="Code: 0xf155" class="the-icons span3"><i class="demo-icon dollar.alep-icon span">&#xf155;</i> <span class="i-name">dollar.alep-icon span</span><span class="i-code">0xf155</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf156" class="the-icons span3"><i class="demo-icon rupee.alep-icon span">&#xf156;</i> <span class="i-name">rupee.alep-icon span</span><span class="i-code">0xf156</span></div>
+        <div title="Code: 0xf157" class="the-icons span3"><i class="demo-icon yen.alep-icon span">&#xf157;</i> <span class="i-name">yen.alep-icon span</span><span class="i-code">0xf157</span></div>
+        <div title="Code: 0xf158" class="the-icons span3"><i class="demo-icon rouble.alep-icon span">&#xf158;</i> <span class="i-name">rouble.alep-icon span</span><span class="i-code">0xf158</span></div>
+        <div title="Code: 0xf159" class="the-icons span3"><i class="demo-icon won.alep-icon span">&#xf159;</i> <span class="i-name">won.alep-icon span</span><span class="i-code">0xf159</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf15a" class="the-icons span3"><i class="demo-icon bitcoin.alep-icon span">&#xf15a;</i> <span class="i-name">bitcoin.alep-icon span</span><span class="i-code">0xf15a</span></div>
+        <div title="Code: 0xf15b" class="the-icons span3"><i class="demo-icon doc-inv.alep-icon span">&#xf15b;</i> <span class="i-name">doc-inv.alep-icon span</span><span class="i-code">0xf15b</span></div>
+        <div title="Code: 0xf15c" class="the-icons span3"><i class="demo-icon doc-text-inv.alep-icon span">&#xf15c;</i> <span class="i-name">doc-text-inv.alep-icon span</span><span class="i-code">0xf15c</span></div>
+        <div title="Code: 0xf15d" class="the-icons span3"><i class="demo-icon sort-name-up.alep-icon span">&#xf15d;</i> <span class="i-name">sort-name-up.alep-icon span</span><span class="i-code">0xf15d</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf15e" class="the-icons span3"><i class="demo-icon sort-name-down.alep-icon span">&#xf15e;</i> <span class="i-name">sort-name-down.alep-icon span</span><span class="i-code">0xf15e</span></div>
+        <div title="Code: 0xf160" class="the-icons span3"><i class="demo-icon sort-alt-up.alep-icon span">&#xf160;</i> <span class="i-name">sort-alt-up.alep-icon span</span><span class="i-code">0xf160</span></div>
+        <div title="Code: 0xf161" class="the-icons span3"><i class="demo-icon sort-alt-down.alep-icon span">&#xf161;</i> <span class="i-name">sort-alt-down.alep-icon span</span><span class="i-code">0xf161</span></div>
+        <div title="Code: 0xf162" class="the-icons span3"><i class="demo-icon sort-number-up.alep-icon span">&#xf162;</i> <span class="i-name">sort-number-up.alep-icon span</span><span class="i-code">0xf162</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf163" class="the-icons span3"><i class="demo-icon sort-number-down.alep-icon span">&#xf163;</i> <span class="i-name">sort-number-down.alep-icon span</span><span class="i-code">0xf163</span></div>
+        <div title="Code: 0xf164" class="the-icons span3"><i class="demo-icon thumbs-up-alt.alep-icon span">&#xf164;</i> <span class="i-name">thumbs-up-alt.alep-icon span</span><span class="i-code">0xf164</span></div>
+        <div title="Code: 0xf165" class="the-icons span3"><i class="demo-icon thumbs-down-alt.alep-icon span">&#xf165;</i> <span class="i-name">thumbs-down-alt.alep-icon span</span><span class="i-code">0xf165</span></div>
+        <div title="Code: 0xf166" class="the-icons span3"><i class="demo-icon youtube-squared.alep-icon span">&#xf166;</i> <span class="i-name">youtube-squared.alep-icon span</span><span class="i-code">0xf166</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf167" class="the-icons span3"><i class="demo-icon youtube.alep-icon span">&#xf167;</i> <span class="i-name">youtube.alep-icon span</span><span class="i-code">0xf167</span></div>
+        <div title="Code: 0xf168" class="the-icons span3"><i class="demo-icon xing.alep-icon span">&#xf168;</i> <span class="i-name">xing.alep-icon span</span><span class="i-code">0xf168</span></div>
+        <div title="Code: 0xf169" class="the-icons span3"><i class="demo-icon xing-squared.alep-icon span">&#xf169;</i> <span class="i-name">xing-squared.alep-icon span</span><span class="i-code">0xf169</span></div>
+        <div title="Code: 0xf16a" class="the-icons span3"><i class="demo-icon youtube-play.alep-icon span">&#xf16a;</i> <span class="i-name">youtube-play.alep-icon span</span><span class="i-code">0xf16a</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf16b" class="the-icons span3"><i class="demo-icon dropbox.alep-icon span">&#xf16b;</i> <span class="i-name">dropbox.alep-icon span</span><span class="i-code">0xf16b</span></div>
+        <div title="Code: 0xf16c" class="the-icons span3"><i class="demo-icon stackoverflow.alep-icon span">&#xf16c;</i> <span class="i-name">stackoverflow.alep-icon span</span><span class="i-code">0xf16c</span></div>
+        <div title="Code: 0xf16d" class="the-icons span3"><i class="demo-icon instagram.alep-icon span">&#xf16d;</i> <span class="i-name">instagram.alep-icon span</span><span class="i-code">0xf16d</span></div>
+        <div title="Code: 0xf16e" class="the-icons span3"><i class="demo-icon flickr.alep-icon span">&#xf16e;</i> <span class="i-name">flickr.alep-icon span</span><span class="i-code">0xf16e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf170" class="the-icons span3"><i class="demo-icon adn.alep-icon span">&#xf170;</i> <span class="i-name">adn.alep-icon span</span><span class="i-code">0xf170</span></div>
+        <div title="Code: 0xf171" class="the-icons span3"><i class="demo-icon bitbucket.alep-icon span">&#xf171;</i> <span class="i-name">bitbucket.alep-icon span</span><span class="i-code">0xf171</span></div>
+        <div title="Code: 0xf172" class="the-icons span3"><i class="demo-icon bitbucket-squared.alep-icon span">&#xf172;</i> <span class="i-name">bitbucket-squared.alep-icon span</span><span class="i-code">0xf172</span></div>
+        <div title="Code: 0xf173" class="the-icons span3"><i class="demo-icon tumblr.alep-icon span">&#xf173;</i> <span class="i-name">tumblr.alep-icon span</span><span class="i-code">0xf173</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf174" class="the-icons span3"><i class="demo-icon tumblr-squared.alep-icon span">&#xf174;</i> <span class="i-name">tumblr-squared.alep-icon span</span><span class="i-code">0xf174</span></div>
+        <div title="Code: 0xf175" class="the-icons span3"><i class="demo-icon down.alep-icon span">&#xf175;</i> <span class="i-name">down.alep-icon span</span><span class="i-code">0xf175</span></div>
+        <div title="Code: 0xf176" class="the-icons span3"><i class="demo-icon up.alep-icon span">&#xf176;</i> <span class="i-name">up.alep-icon span</span><span class="i-code">0xf176</span></div>
+        <div title="Code: 0xf177" class="the-icons span3"><i class="demo-icon left.alep-icon span">&#xf177;</i> <span class="i-name">left.alep-icon span</span><span class="i-code">0xf177</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf178" class="the-icons span3"><i class="demo-icon right.alep-icon span">&#xf178;</i> <span class="i-name">right.alep-icon span</span><span class="i-code">0xf178</span></div>
+        <div title="Code: 0xf179" class="the-icons span3"><i class="demo-icon apple.alep-icon span">&#xf179;</i> <span class="i-name">apple.alep-icon span</span><span class="i-code">0xf179</span></div>
+        <div title="Code: 0xf17a" class="the-icons span3"><i class="demo-icon windows.alep-icon span">&#xf17a;</i> <span class="i-name">windows.alep-icon span</span><span class="i-code">0xf17a</span></div>
+        <div title="Code: 0xf17b" class="the-icons span3"><i class="demo-icon android.alep-icon span">&#xf17b;</i> <span class="i-name">android.alep-icon span</span><span class="i-code">0xf17b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf17c" class="the-icons span3"><i class="demo-icon linux.alep-icon span">&#xf17c;</i> <span class="i-name">linux.alep-icon span</span><span class="i-code">0xf17c</span></div>
+        <div title="Code: 0xf17d" class="the-icons span3"><i class="demo-icon dribbble.alep-icon span">&#xf17d;</i> <span class="i-name">dribbble.alep-icon span</span><span class="i-code">0xf17d</span></div>
+        <div title="Code: 0xf17e" class="the-icons span3"><i class="demo-icon skype.alep-icon span">&#xf17e;</i> <span class="i-name">skype.alep-icon span</span><span class="i-code">0xf17e</span></div>
+        <div title="Code: 0xf180" class="the-icons span3"><i class="demo-icon foursquare.alep-icon span">&#xf180;</i> <span class="i-name">foursquare.alep-icon span</span><span class="i-code">0xf180</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf181" class="the-icons span3"><i class="demo-icon trello.alep-icon span">&#xf181;</i> <span class="i-name">trello.alep-icon span</span><span class="i-code">0xf181</span></div>
+        <div title="Code: 0xf182" class="the-icons span3"><i class="demo-icon female.alep-icon span">&#xf182;</i> <span class="i-name">female.alep-icon span</span><span class="i-code">0xf182</span></div>
+        <div title="Code: 0xf183" class="the-icons span3"><i class="demo-icon male.alep-icon span">&#xf183;</i> <span class="i-name">male.alep-icon span</span><span class="i-code">0xf183</span></div>
+        <div title="Code: 0xf184" class="the-icons span3"><i class="demo-icon gittip.alep-icon span">&#xf184;</i> <span class="i-name">gittip.alep-icon span</span><span class="i-code">0xf184</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf185" class="the-icons span3"><i class="demo-icon sun.alep-icon span">&#xf185;</i> <span class="i-name">sun.alep-icon span</span><span class="i-code">0xf185</span></div>
+        <div title="Code: 0xf186" class="the-icons span3"><i class="demo-icon moon.alep-icon span">&#xf186;</i> <span class="i-name">moon.alep-icon span</span><span class="i-code">0xf186</span></div>
+        <div title="Code: 0xf187" class="the-icons span3"><i class="demo-icon box.alep-icon span">&#xf187;</i> <span class="i-name">box.alep-icon span</span><span class="i-code">0xf187</span></div>
+        <div title="Code: 0xf188" class="the-icons span3"><i class="demo-icon bug.alep-icon span">&#xf188;</i> <span class="i-name">bug.alep-icon span</span><span class="i-code">0xf188</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf189" class="the-icons span3"><i class="demo-icon vkontakte.alep-icon span">&#xf189;</i> <span class="i-name">vkontakte.alep-icon span</span><span class="i-code">0xf189</span></div>
+        <div title="Code: 0xf18a" class="the-icons span3"><i class="demo-icon weibo.alep-icon span">&#xf18a;</i> <span class="i-name">weibo.alep-icon span</span><span class="i-code">0xf18a</span></div>
+        <div title="Code: 0xf18b" class="the-icons span3"><i class="demo-icon renren.alep-icon span">&#xf18b;</i> <span class="i-name">renren.alep-icon span</span><span class="i-code">0xf18b</span></div>
+        <div title="Code: 0xf18c" class="the-icons span3"><i class="demo-icon pagelines.alep-icon span">&#xf18c;</i> <span class="i-name">pagelines.alep-icon span</span><span class="i-code">0xf18c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf18d" class="the-icons span3"><i class="demo-icon stackexchange.alep-icon span">&#xf18d;</i> <span class="i-name">stackexchange.alep-icon span</span><span class="i-code">0xf18d</span></div>
+        <div title="Code: 0xf18e" class="the-icons span3"><i class="demo-icon right-circled2.alep-icon span">&#xf18e;</i> <span class="i-name">right-circled2.alep-icon span</span><span class="i-code">0xf18e</span></div>
+        <div title="Code: 0xf190" class="the-icons span3"><i class="demo-icon left-circled2.alep-icon span">&#xf190;</i> <span class="i-name">left-circled2.alep-icon span</span><span class="i-code">0xf190</span></div>
+        <div title="Code: 0xf191" class="the-icons span3"><i class="demo-icon collapse-left.alep-icon span">&#xf191;</i> <span class="i-name">collapse-left.alep-icon span</span><span class="i-code">0xf191</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf192" class="the-icons span3"><i class="demo-icon dot-circled.alep-icon span">&#xf192;</i> <span class="i-name">dot-circled.alep-icon span</span><span class="i-code">0xf192</span></div>
+        <div title="Code: 0xf193" class="the-icons span3"><i class="demo-icon wheelchair.alep-icon span">&#xf193;</i> <span class="i-name">wheelchair.alep-icon span</span><span class="i-code">0xf193</span></div>
+        <div title="Code: 0xf194" class="the-icons span3"><i class="demo-icon vimeo-squared.alep-icon span">&#xf194;</i> <span class="i-name">vimeo-squared.alep-icon span</span><span class="i-code">0xf194</span></div>
+        <div title="Code: 0xf195" class="the-icons span3"><i class="demo-icon try.alep-icon span">&#xf195;</i> <span class="i-name">try.alep-icon span</span><span class="i-code">0xf195</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf196" class="the-icons span3"><i class="demo-icon plus-squared-alt.alep-icon span">&#xf196;</i> <span class="i-name">plus-squared-alt.alep-icon span</span><span class="i-code">0xf196</span></div>
+        <div title="Code: 0xf197" class="the-icons span3"><i class="demo-icon space-shuttle.alep-icon span">&#xf197;</i> <span class="i-name">space-shuttle.alep-icon span</span><span class="i-code">0xf197</span></div>
+        <div title="Code: 0xf198" class="the-icons span3"><i class="demo-icon slack.alep-icon span">&#xf198;</i> <span class="i-name">slack.alep-icon span</span><span class="i-code">0xf198</span></div>
+        <div title="Code: 0xf199" class="the-icons span3"><i class="demo-icon mail-squared.alep-icon span">&#xf199;</i> <span class="i-name">mail-squared.alep-icon span</span><span class="i-code">0xf199</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf19a" class="the-icons span3"><i class="demo-icon wordpress.alep-icon span">&#xf19a;</i> <span class="i-name">wordpress.alep-icon span</span><span class="i-code">0xf19a</span></div>
+        <div title="Code: 0xf19b" class="the-icons span3"><i class="demo-icon openid.alep-icon span">&#xf19b;</i> <span class="i-name">openid.alep-icon span</span><span class="i-code">0xf19b</span></div>
+        <div title="Code: 0xf19c" class="the-icons span3"><i class="demo-icon bank.alep-icon span">&#xf19c;</i> <span class="i-name">bank.alep-icon span</span><span class="i-code">0xf19c</span></div>
+        <div title="Code: 0xf19d" class="the-icons span3"><i class="demo-icon graduation-cap.alep-icon span">&#xf19d;</i> <span class="i-name">graduation-cap.alep-icon span</span><span class="i-code">0xf19d</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf19e" class="the-icons span3"><i class="demo-icon yahoo.alep-icon span">&#xf19e;</i> <span class="i-name">yahoo.alep-icon span</span><span class="i-code">0xf19e</span></div>
+        <div title="Code: 0xf1a0" class="the-icons span3"><i class="demo-icon google.alep-icon span">&#xf1a0;</i> <span class="i-name">google.alep-icon span</span><span class="i-code">0xf1a0</span></div>
+        <div title="Code: 0xf1a1" class="the-icons span3"><i class="demo-icon reddit.alep-icon span">&#xf1a1;</i> <span class="i-name">reddit.alep-icon span</span><span class="i-code">0xf1a1</span></div>
+        <div title="Code: 0xf1a2" class="the-icons span3"><i class="demo-icon reddit-squared.alep-icon span">&#xf1a2;</i> <span class="i-name">reddit-squared.alep-icon span</span><span class="i-code">0xf1a2</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1a3" class="the-icons span3"><i class="demo-icon stumbleupon-circled.alep-icon span">&#xf1a3;</i> <span class="i-name">stumbleupon-circled.alep-icon span</span><span class="i-code">0xf1a3</span></div>
+        <div title="Code: 0xf1a4" class="the-icons span3"><i class="demo-icon stumbleupon.alep-icon span">&#xf1a4;</i> <span class="i-name">stumbleupon.alep-icon span</span><span class="i-code">0xf1a4</span></div>
+        <div title="Code: 0xf1a5" class="the-icons span3"><i class="demo-icon delicious.alep-icon span">&#xf1a5;</i> <span class="i-name">delicious.alep-icon span</span><span class="i-code">0xf1a5</span></div>
+        <div title="Code: 0xf1a6" class="the-icons span3"><i class="demo-icon digg.alep-icon span">&#xf1a6;</i> <span class="i-name">digg.alep-icon span</span><span class="i-code">0xf1a6</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1a7" class="the-icons span3"><i class="demo-icon pied-piper-squared.alep-icon span">&#xf1a7;</i> <span class="i-name">pied-piper-squared.alep-icon span</span><span class="i-code">0xf1a7</span></div>
+        <div title="Code: 0xf1a8" class="the-icons span3"><i class="demo-icon pied-piper-alt.alep-icon span">&#xf1a8;</i> <span class="i-name">pied-piper-alt.alep-icon span</span><span class="i-code">0xf1a8</span></div>
+        <div title="Code: 0xf1a9" class="the-icons span3"><i class="demo-icon drupal.alep-icon span">&#xf1a9;</i> <span class="i-name">drupal.alep-icon span</span><span class="i-code">0xf1a9</span></div>
+        <div title="Code: 0xf1aa" class="the-icons span3"><i class="demo-icon joomla.alep-icon span">&#xf1aa;</i> <span class="i-name">joomla.alep-icon span</span><span class="i-code">0xf1aa</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1ab" class="the-icons span3"><i class="demo-icon language.alep-icon span">&#xf1ab;</i> <span class="i-name">language.alep-icon span</span><span class="i-code">0xf1ab</span></div>
+        <div title="Code: 0xf1ac" class="the-icons span3"><i class="demo-icon fax.alep-icon span">&#xf1ac;</i> <span class="i-name">fax.alep-icon span</span><span class="i-code">0xf1ac</span></div>
+        <div title="Code: 0xf1ad" class="the-icons span3"><i class="demo-icon building-filled.alep-icon span">&#xf1ad;</i> <span class="i-name">building-filled.alep-icon span</span><span class="i-code">0xf1ad</span></div>
+        <div title="Code: 0xf1ae" class="the-icons span3"><i class="demo-icon child.alep-icon span">&#xf1ae;</i> <span class="i-name">child.alep-icon span</span><span class="i-code">0xf1ae</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1b0" class="the-icons span3"><i class="demo-icon paw.alep-icon span">&#xf1b0;</i> <span class="i-name">paw.alep-icon span</span><span class="i-code">0xf1b0</span></div>
+        <div title="Code: 0xf1b1" class="the-icons span3"><i class="demo-icon spoon.alep-icon span">&#xf1b1;</i> <span class="i-name">spoon.alep-icon span</span><span class="i-code">0xf1b1</span></div>
+        <div title="Code: 0xf1b2" class="the-icons span3"><i class="demo-icon cube.alep-icon span">&#xf1b2;</i> <span class="i-name">cube.alep-icon span</span><span class="i-code">0xf1b2</span></div>
+        <div title="Code: 0xf1b3" class="the-icons span3"><i class="demo-icon cubes.alep-icon span">&#xf1b3;</i> <span class="i-name">cubes.alep-icon span</span><span class="i-code">0xf1b3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1b4" class="the-icons span3"><i class="demo-icon behance.alep-icon span">&#xf1b4;</i> <span class="i-name">behance.alep-icon span</span><span class="i-code">0xf1b4</span></div>
+        <div title="Code: 0xf1b5" class="the-icons span3"><i class="demo-icon behance-squared.alep-icon span">&#xf1b5;</i> <span class="i-name">behance-squared.alep-icon span</span><span class="i-code">0xf1b5</span></div>
+        <div title="Code: 0xf1b6" class="the-icons span3"><i class="demo-icon steam.alep-icon span">&#xf1b6;</i> <span class="i-name">steam.alep-icon span</span><span class="i-code">0xf1b6</span></div>
+        <div title="Code: 0xf1b7" class="the-icons span3"><i class="demo-icon steam-squared.alep-icon span">&#xf1b7;</i> <span class="i-name">steam-squared.alep-icon span</span><span class="i-code">0xf1b7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1b8" class="the-icons span3"><i class="demo-icon recycle.alep-icon span">&#xf1b8;</i> <span class="i-name">recycle.alep-icon span</span><span class="i-code">0xf1b8</span></div>
+        <div title="Code: 0xf1b9" class="the-icons span3"><i class="demo-icon cab.alep-icon span">&#xf1b9;</i> <span class="i-name">cab.alep-icon span</span><span class="i-code">0xf1b9</span></div>
+        <div title="Code: 0xf1ba" class="the-icons span3"><i class="demo-icon taxi.alep-icon span">&#xf1ba;</i> <span class="i-name">taxi.alep-icon span</span><span class="i-code">0xf1ba</span></div>
+        <div title="Code: 0xf1bb" class="the-icons span3"><i class="demo-icon tree.alep-icon span">&#xf1bb;</i> <span class="i-name">tree.alep-icon span</span><span class="i-code">0xf1bb</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1bc" class="the-icons span3"><i class="demo-icon spotify.alep-icon span">&#xf1bc;</i> <span class="i-name">spotify.alep-icon span</span><span class="i-code">0xf1bc</span></div>
+        <div title="Code: 0xf1bd" class="the-icons span3"><i class="demo-icon deviantart.alep-icon span">&#xf1bd;</i> <span class="i-name">deviantart.alep-icon span</span><span class="i-code">0xf1bd</span></div>
+        <div title="Code: 0xf1be" class="the-icons span3"><i class="demo-icon soundcloud.alep-icon span">&#xf1be;</i> <span class="i-name">soundcloud.alep-icon span</span><span class="i-code">0xf1be</span></div>
+        <div title="Code: 0xf1c0" class="the-icons span3"><i class="demo-icon database.alep-icon span">&#xf1c0;</i> <span class="i-name">database.alep-icon span</span><span class="i-code">0xf1c0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1c1" class="the-icons span3"><i class="demo-icon file-pdf.alep-icon span">&#xf1c1;</i> <span class="i-name">file-pdf.alep-icon span</span><span class="i-code">0xf1c1</span></div>
+        <div title="Code: 0xf1c2" class="the-icons span3"><i class="demo-icon file-word.alep-icon span">&#xf1c2;</i> <span class="i-name">file-word.alep-icon span</span><span class="i-code">0xf1c2</span></div>
+        <div title="Code: 0xf1c3" class="the-icons span3"><i class="demo-icon file-excel.alep-icon span">&#xf1c3;</i> <span class="i-name">file-excel.alep-icon span</span><span class="i-code">0xf1c3</span></div>
+        <div title="Code: 0xf1c4" class="the-icons span3"><i class="demo-icon file-powerpoint.alep-icon span">&#xf1c4;</i> <span class="i-name">file-powerpoint.alep-icon span</span><span class="i-code">0xf1c4</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1c5" class="the-icons span3"><i class="demo-icon file-image.alep-icon span">&#xf1c5;</i> <span class="i-name">file-image.alep-icon span</span><span class="i-code">0xf1c5</span></div>
+        <div title="Code: 0xf1c6" class="the-icons span3"><i class="demo-icon file-archive.alep-icon span">&#xf1c6;</i> <span class="i-name">file-archive.alep-icon span</span><span class="i-code">0xf1c6</span></div>
+        <div title="Code: 0xf1c7" class="the-icons span3"><i class="demo-icon file-audio.alep-icon span">&#xf1c7;</i> <span class="i-name">file-audio.alep-icon span</span><span class="i-code">0xf1c7</span></div>
+        <div title="Code: 0xf1c8" class="the-icons span3"><i class="demo-icon file-video.alep-icon span">&#xf1c8;</i> <span class="i-name">file-video.alep-icon span</span><span class="i-code">0xf1c8</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1c9" class="the-icons span3"><i class="demo-icon file-code.alep-icon span">&#xf1c9;</i> <span class="i-name">file-code.alep-icon span</span><span class="i-code">0xf1c9</span></div>
+        <div title="Code: 0xf1ca" class="the-icons span3"><i class="demo-icon vine.alep-icon span">&#xf1ca;</i> <span class="i-name">vine.alep-icon span</span><span class="i-code">0xf1ca</span></div>
+        <div title="Code: 0xf1cb" class="the-icons span3"><i class="demo-icon codeopen.alep-icon span">&#xf1cb;</i> <span class="i-name">codeopen.alep-icon span</span><span class="i-code">0xf1cb</span></div>
+        <div title="Code: 0xf1cc" class="the-icons span3"><i class="demo-icon jsfiddle.alep-icon span">&#xf1cc;</i> <span class="i-name">jsfiddle.alep-icon span</span><span class="i-code">0xf1cc</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1cd" class="the-icons span3"><i class="demo-icon lifebuoy.alep-icon span">&#xf1cd;</i> <span class="i-name">lifebuoy.alep-icon span</span><span class="i-code">0xf1cd</span></div>
+        <div title="Code: 0xf1ce" class="the-icons span3"><i class="demo-icon circle-notch.alep-icon span">&#xf1ce;</i> <span class="i-name">circle-notch.alep-icon span</span><span class="i-code">0xf1ce</span></div>
+        <div title="Code: 0xf1d0" class="the-icons span3"><i class="demo-icon rebel.alep-icon span">&#xf1d0;</i> <span class="i-name">rebel.alep-icon span</span><span class="i-code">0xf1d0</span></div>
+        <div title="Code: 0xf1d1" class="the-icons span3"><i class="demo-icon empire.alep-icon span">&#xf1d1;</i> <span class="i-name">empire.alep-icon span</span><span class="i-code">0xf1d1</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1d2" class="the-icons span3"><i class="demo-icon git-squared.alep-icon span">&#xf1d2;</i> <span class="i-name">git-squared.alep-icon span</span><span class="i-code">0xf1d2</span></div>
+        <div title="Code: 0xf1d3" class="the-icons span3"><i class="demo-icon git.alep-icon span">&#xf1d3;</i> <span class="i-name">git.alep-icon span</span><span class="i-code">0xf1d3</span></div>
+        <div title="Code: 0xf1d4" class="the-icons span3"><i class="demo-icon hacker-news.alep-icon span">&#xf1d4;</i> <span class="i-name">hacker-news.alep-icon span</span><span class="i-code">0xf1d4</span></div>
+        <div title="Code: 0xf1d5" class="the-icons span3"><i class="demo-icon tencent-weibo.alep-icon span">&#xf1d5;</i> <span class="i-name">tencent-weibo.alep-icon span</span><span class="i-code">0xf1d5</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1d6" class="the-icons span3"><i class="demo-icon qq.alep-icon span">&#xf1d6;</i> <span class="i-name">qq.alep-icon span</span><span class="i-code">0xf1d6</span></div>
+        <div title="Code: 0xf1d7" class="the-icons span3"><i class="demo-icon wechat.alep-icon span">&#xf1d7;</i> <span class="i-name">wechat.alep-icon span</span><span class="i-code">0xf1d7</span></div>
+        <div title="Code: 0xf1d8" class="the-icons span3"><i class="demo-icon paper-plane.alep-icon span">&#xf1d8;</i> <span class="i-name">paper-plane.alep-icon span</span><span class="i-code">0xf1d8</span></div>
+        <div title="Code: 0xf1d9" class="the-icons span3"><i class="demo-icon paper-plane-empty.alep-icon span">&#xf1d9;</i> <span class="i-name">paper-plane-empty.alep-icon span</span><span class="i-code">0xf1d9</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1da" class="the-icons span3"><i class="demo-icon history.alep-icon span">&#xf1da;</i> <span class="i-name">history.alep-icon span</span><span class="i-code">0xf1da</span></div>
+        <div title="Code: 0xf1db" class="the-icons span3"><i class="demo-icon circle-thin.alep-icon span">&#xf1db;</i> <span class="i-name">circle-thin.alep-icon span</span><span class="i-code">0xf1db</span></div>
+        <div title="Code: 0xf1dc" class="the-icons span3"><i class="demo-icon header.alep-icon span">&#xf1dc;</i> <span class="i-name">header.alep-icon span</span><span class="i-code">0xf1dc</span></div>
+        <div title="Code: 0xf1dd" class="the-icons span3"><i class="demo-icon paragraph.alep-icon span">&#xf1dd;</i> <span class="i-name">paragraph.alep-icon span</span><span class="i-code">0xf1dd</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1de" class="the-icons span3"><i class="demo-icon sliders.alep-icon span">&#xf1de;</i> <span class="i-name">sliders.alep-icon span</span><span class="i-code">0xf1de</span></div>
+        <div title="Code: 0xf1e0" class="the-icons span3"><i class="demo-icon share.alep-icon span">&#xf1e0;</i> <span class="i-name">share.alep-icon span</span><span class="i-code">0xf1e0</span></div>
+        <div title="Code: 0xf1e1" class="the-icons span3"><i class="demo-icon share-squared.alep-icon span">&#xf1e1;</i> <span class="i-name">share-squared.alep-icon span</span><span class="i-code">0xf1e1</span></div>
+        <div title="Code: 0xf1e2" class="the-icons span3"><i class="demo-icon bomb.alep-icon span">&#xf1e2;</i> <span class="i-name">bomb.alep-icon span</span><span class="i-code">0xf1e2</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1e3" class="the-icons span3"><i class="demo-icon soccer-ball.alep-icon span">&#xf1e3;</i> <span class="i-name">soccer-ball.alep-icon span</span><span class="i-code">0xf1e3</span></div>
+        <div title="Code: 0xf1e4" class="the-icons span3"><i class="demo-icon tty.alep-icon span">&#xf1e4;</i> <span class="i-name">tty.alep-icon span</span><span class="i-code">0xf1e4</span></div>
+        <div title="Code: 0xf1e5" class="the-icons span3"><i class="demo-icon binoculars.alep-icon span">&#xf1e5;</i> <span class="i-name">binoculars.alep-icon span</span><span class="i-code">0xf1e5</span></div>
+        <div title="Code: 0xf1e6" class="the-icons span3"><i class="demo-icon plug.alep-icon span">&#xf1e6;</i> <span class="i-name">plug.alep-icon span</span><span class="i-code">0xf1e6</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1e7" class="the-icons span3"><i class="demo-icon slideshare.alep-icon span">&#xf1e7;</i> <span class="i-name">slideshare.alep-icon span</span><span class="i-code">0xf1e7</span></div>
+        <div title="Code: 0xf1e8" class="the-icons span3"><i class="demo-icon twitch.alep-icon span">&#xf1e8;</i> <span class="i-name">twitch.alep-icon span</span><span class="i-code">0xf1e8</span></div>
+        <div title="Code: 0xf1e9" class="the-icons span3"><i class="demo-icon yelp.alep-icon span">&#xf1e9;</i> <span class="i-name">yelp.alep-icon span</span><span class="i-code">0xf1e9</span></div>
+        <div title="Code: 0xf1ea" class="the-icons span3"><i class="demo-icon newspaper.alep-icon span">&#xf1ea;</i> <span class="i-name">newspaper.alep-icon span</span><span class="i-code">0xf1ea</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1eb" class="the-icons span3"><i class="demo-icon wifi.alep-icon span">&#xf1eb;</i> <span class="i-name">wifi.alep-icon span</span><span class="i-code">0xf1eb</span></div>
+        <div title="Code: 0xf1ec" class="the-icons span3"><i class="demo-icon calc.alep-icon span">&#xf1ec;</i> <span class="i-name">calc.alep-icon span</span><span class="i-code">0xf1ec</span></div>
+        <div title="Code: 0xf1ed" class="the-icons span3"><i class="demo-icon paypal.alep-icon span">&#xf1ed;</i> <span class="i-name">paypal.alep-icon span</span><span class="i-code">0xf1ed</span></div>
+        <div title="Code: 0xf1ee" class="the-icons span3"><i class="demo-icon gwallet.alep-icon span">&#xf1ee;</i> <span class="i-name">gwallet.alep-icon span</span><span class="i-code">0xf1ee</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1f0" class="the-icons span3"><i class="demo-icon cc-visa.alep-icon span">&#xf1f0;</i> <span class="i-name">cc-visa.alep-icon span</span><span class="i-code">0xf1f0</span></div>
+        <div title="Code: 0xf1f1" class="the-icons span3"><i class="demo-icon cc-mastercard.alep-icon span">&#xf1f1;</i> <span class="i-name">cc-mastercard.alep-icon span</span><span class="i-code">0xf1f1</span></div>
+        <div title="Code: 0xf1f2" class="the-icons span3"><i class="demo-icon cc-discover.alep-icon span">&#xf1f2;</i> <span class="i-name">cc-discover.alep-icon span</span><span class="i-code">0xf1f2</span></div>
+        <div title="Code: 0xf1f3" class="the-icons span3"><i class="demo-icon cc-amex.alep-icon span">&#xf1f3;</i> <span class="i-name">cc-amex.alep-icon span</span><span class="i-code">0xf1f3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1f4" class="the-icons span3"><i class="demo-icon cc-paypal.alep-icon span">&#xf1f4;</i> <span class="i-name">cc-paypal.alep-icon span</span><span class="i-code">0xf1f4</span></div>
+        <div title="Code: 0xf1f5" class="the-icons span3"><i class="demo-icon cc-stripe.alep-icon span">&#xf1f5;</i> <span class="i-name">cc-stripe.alep-icon span</span><span class="i-code">0xf1f5</span></div>
+        <div title="Code: 0xf1f6" class="the-icons span3"><i class="demo-icon bell-off.alep-icon span">&#xf1f6;</i> <span class="i-name">bell-off.alep-icon span</span><span class="i-code">0xf1f6</span></div>
+        <div title="Code: 0xf1f7" class="the-icons span3"><i class="demo-icon bell-off-empty.alep-icon span">&#xf1f7;</i> <span class="i-name">bell-off-empty.alep-icon span</span><span class="i-code">0xf1f7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1f8" class="the-icons span3"><i class="demo-icon trash.alep-icon span">&#xf1f8;</i> <span class="i-name">trash.alep-icon span</span><span class="i-code">0xf1f8</span></div>
+        <div title="Code: 0xf1f9" class="the-icons span3"><i class="demo-icon copyright.alep-icon span">&#xf1f9;</i> <span class="i-name">copyright.alep-icon span</span><span class="i-code">0xf1f9</span></div>
+        <div title="Code: 0xf1fa" class="the-icons span3"><i class="demo-icon at.alep-icon span">&#xf1fa;</i> <span class="i-name">at.alep-icon span</span><span class="i-code">0xf1fa</span></div>
+        <div title="Code: 0xf1fb" class="the-icons span3"><i class="demo-icon eyedropper.alep-icon span">&#xf1fb;</i> <span class="i-name">eyedropper.alep-icon span</span><span class="i-code">0xf1fb</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf1fc" class="the-icons span3"><i class="demo-icon brush.alep-icon span">&#xf1fc;</i> <span class="i-name">brush.alep-icon span</span><span class="i-code">0xf1fc</span></div>
+        <div title="Code: 0xf1fd" class="the-icons span3"><i class="demo-icon birthday.alep-icon span">&#xf1fd;</i> <span class="i-name">birthday.alep-icon span</span><span class="i-code">0xf1fd</span></div>
+        <div title="Code: 0xf1fe" class="the-icons span3"><i class="demo-icon chart-area.alep-icon span">&#xf1fe;</i> <span class="i-name">chart-area.alep-icon span</span><span class="i-code">0xf1fe</span></div>
+        <div title="Code: 0xf200" class="the-icons span3"><i class="demo-icon chart-pie.alep-icon span">&#xf200;</i> <span class="i-name">chart-pie.alep-icon span</span><span class="i-code">0xf200</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf201" class="the-icons span3"><i class="demo-icon chart-line.alep-icon span">&#xf201;</i> <span class="i-name">chart-line.alep-icon span</span><span class="i-code">0xf201</span></div>
+        <div title="Code: 0xf202" class="the-icons span3"><i class="demo-icon lastfm.alep-icon span">&#xf202;</i> <span class="i-name">lastfm.alep-icon span</span><span class="i-code">0xf202</span></div>
+        <div title="Code: 0xf203" class="the-icons span3"><i class="demo-icon lastfm-squared.alep-icon span">&#xf203;</i> <span class="i-name">lastfm-squared.alep-icon span</span><span class="i-code">0xf203</span></div>
+        <div title="Code: 0xf204" class="the-icons span3"><i class="demo-icon toggle-off.alep-icon span">&#xf204;</i> <span class="i-name">toggle-off.alep-icon span</span><span class="i-code">0xf204</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf205" class="the-icons span3"><i class="demo-icon toggle-on.alep-icon span">&#xf205;</i> <span class="i-name">toggle-on.alep-icon span</span><span class="i-code">0xf205</span></div>
+        <div title="Code: 0xf206" class="the-icons span3"><i class="demo-icon bicycle.alep-icon span">&#xf206;</i> <span class="i-name">bicycle.alep-icon span</span><span class="i-code">0xf206</span></div>
+        <div title="Code: 0xf207" class="the-icons span3"><i class="demo-icon bus.alep-icon span">&#xf207;</i> <span class="i-name">bus.alep-icon span</span><span class="i-code">0xf207</span></div>
+        <div title="Code: 0xf208" class="the-icons span3"><i class="demo-icon ioxhost.alep-icon span">&#xf208;</i> <span class="i-name">ioxhost.alep-icon span</span><span class="i-code">0xf208</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf209" class="the-icons span3"><i class="demo-icon angellist.alep-icon span">&#xf209;</i> <span class="i-name">angellist.alep-icon span</span><span class="i-code">0xf209</span></div>
+        <div title="Code: 0xf20a" class="the-icons span3"><i class="demo-icon cc.alep-icon span">&#xf20a;</i> <span class="i-name">cc.alep-icon span</span><span class="i-code">0xf20a</span></div>
+        <div title="Code: 0xf20b" class="the-icons span3"><i class="demo-icon shekel.alep-icon span">&#xf20b;</i> <span class="i-name">shekel.alep-icon span</span><span class="i-code">0xf20b</span></div>
+        <div title="Code: 0xf20c" class="the-icons span3"><i class="demo-icon meanpath.alep-icon span">&#xf20c;</i> <span class="i-name">meanpath.alep-icon span</span><span class="i-code">0xf20c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf20d" class="the-icons span3"><i class="demo-icon buysellads.alep-icon span">&#xf20d;</i> <span class="i-name">buysellads.alep-icon span</span><span class="i-code">0xf20d</span></div>
+        <div title="Code: 0xf20e" class="the-icons span3"><i class="demo-icon connectdevelop.alep-icon span">&#xf20e;</i> <span class="i-name">connectdevelop.alep-icon span</span><span class="i-code">0xf20e</span></div>
+        <div title="Code: 0xf210" class="the-icons span3"><i class="demo-icon dashcube.alep-icon span">&#xf210;</i> <span class="i-name">dashcube.alep-icon span</span><span class="i-code">0xf210</span></div>
+        <div title="Code: 0xf211" class="the-icons span3"><i class="demo-icon forumbee.alep-icon span">&#xf211;</i> <span class="i-name">forumbee.alep-icon span</span><span class="i-code">0xf211</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf212" class="the-icons span3"><i class="demo-icon leanpub.alep-icon span">&#xf212;</i> <span class="i-name">leanpub.alep-icon span</span><span class="i-code">0xf212</span></div>
+        <div title="Code: 0xf213" class="the-icons span3"><i class="demo-icon sellsy.alep-icon span">&#xf213;</i> <span class="i-name">sellsy.alep-icon span</span><span class="i-code">0xf213</span></div>
+        <div title="Code: 0xf214" class="the-icons span3"><i class="demo-icon shirtsinbulk.alep-icon span">&#xf214;</i> <span class="i-name">shirtsinbulk.alep-icon span</span><span class="i-code">0xf214</span></div>
+        <div title="Code: 0xf215" class="the-icons span3"><i class="demo-icon simplybuilt.alep-icon span">&#xf215;</i> <span class="i-name">simplybuilt.alep-icon span</span><span class="i-code">0xf215</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf216" class="the-icons span3"><i class="demo-icon skyatlas.alep-icon span">&#xf216;</i> <span class="i-name">skyatlas.alep-icon span</span><span class="i-code">0xf216</span></div>
+        <div title="Code: 0xf217" class="the-icons span3"><i class="demo-icon cart-plus.alep-icon span">&#xf217;</i> <span class="i-name">cart-plus.alep-icon span</span><span class="i-code">0xf217</span></div>
+        <div title="Code: 0xf218" class="the-icons span3"><i class="demo-icon cart-arrow-down.alep-icon span">&#xf218;</i> <span class="i-name">cart-arrow-down.alep-icon span</span><span class="i-code">0xf218</span></div>
+        <div title="Code: 0xf219" class="the-icons span3"><i class="demo-icon diamond.alep-icon span">&#xf219;</i> <span class="i-name">diamond.alep-icon span</span><span class="i-code">0xf219</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf21a" class="the-icons span3"><i class="demo-icon ship.alep-icon span">&#xf21a;</i> <span class="i-name">ship.alep-icon span</span><span class="i-code">0xf21a</span></div>
+        <div title="Code: 0xf21b" class="the-icons span3"><i class="demo-icon user-secret.alep-icon span">&#xf21b;</i> <span class="i-name">user-secret.alep-icon span</span><span class="i-code">0xf21b</span></div>
+        <div title="Code: 0xf21c" class="the-icons span3"><i class="demo-icon motorcycle.alep-icon span">&#xf21c;</i> <span class="i-name">motorcycle.alep-icon span</span><span class="i-code">0xf21c</span></div>
+        <div title="Code: 0xf21d" class="the-icons span3"><i class="demo-icon street-view.alep-icon span">&#xf21d;</i> <span class="i-name">street-view.alep-icon span</span><span class="i-code">0xf21d</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf21e" class="the-icons span3"><i class="demo-icon heartbeat.alep-icon span">&#xf21e;</i> <span class="i-name">heartbeat.alep-icon span</span><span class="i-code">0xf21e</span></div>
+        <div title="Code: 0xf221" class="the-icons span3"><i class="demo-icon venus.alep-icon span">&#xf221;</i> <span class="i-name">venus.alep-icon span</span><span class="i-code">0xf221</span></div>
+        <div title="Code: 0xf222" class="the-icons span3"><i class="demo-icon mars.alep-icon span">&#xf222;</i> <span class="i-name">mars.alep-icon span</span><span class="i-code">0xf222</span></div>
+        <div title="Code: 0xf223" class="the-icons span3"><i class="demo-icon mercury.alep-icon span">&#xf223;</i> <span class="i-name">mercury.alep-icon span</span><span class="i-code">0xf223</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf224" class="the-icons span3"><i class="demo-icon transgender.alep-icon span">&#xf224;</i> <span class="i-name">transgender.alep-icon span</span><span class="i-code">0xf224</span></div>
+        <div title="Code: 0xf225" class="the-icons span3"><i class="demo-icon transgender-alt.alep-icon span">&#xf225;</i> <span class="i-name">transgender-alt.alep-icon span</span><span class="i-code">0xf225</span></div>
+        <div title="Code: 0xf226" class="the-icons span3"><i class="demo-icon venus-double.alep-icon span">&#xf226;</i> <span class="i-name">venus-double.alep-icon span</span><span class="i-code">0xf226</span></div>
+        <div title="Code: 0xf227" class="the-icons span3"><i class="demo-icon mars-double.alep-icon span">&#xf227;</i> <span class="i-name">mars-double.alep-icon span</span><span class="i-code">0xf227</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf228" class="the-icons span3"><i class="demo-icon venus-mars.alep-icon span">&#xf228;</i> <span class="i-name">venus-mars.alep-icon span</span><span class="i-code">0xf228</span></div>
+        <div title="Code: 0xf229" class="the-icons span3"><i class="demo-icon mars-stroke.alep-icon span">&#xf229;</i> <span class="i-name">mars-stroke.alep-icon span</span><span class="i-code">0xf229</span></div>
+        <div title="Code: 0xf22a" class="the-icons span3"><i class="demo-icon mars-stroke-v.alep-icon span">&#xf22a;</i> <span class="i-name">mars-stroke-v.alep-icon span</span><span class="i-code">0xf22a</span></div>
+        <div title="Code: 0xf22b" class="the-icons span3"><i class="demo-icon mars-stroke-h.alep-icon span">&#xf22b;</i> <span class="i-name">mars-stroke-h.alep-icon span</span><span class="i-code">0xf22b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf22c" class="the-icons span3"><i class="demo-icon neuter.alep-icon span">&#xf22c;</i> <span class="i-name">neuter.alep-icon span</span><span class="i-code">0xf22c</span></div>
+        <div title="Code: 0xf22d" class="the-icons span3"><i class="demo-icon genderless.alep-icon span">&#xf22d;</i> <span class="i-name">genderless.alep-icon span</span><span class="i-code">0xf22d</span></div>
+        <div title="Code: 0xf230" class="the-icons span3"><i class="demo-icon facebook-official.alep-icon span">&#xf230;</i> <span class="i-name">facebook-official.alep-icon span</span><span class="i-code">0xf230</span></div>
+        <div title="Code: 0xf231" class="the-icons span3"><i class="demo-icon pinterest.alep-icon span">&#xf231;</i> <span class="i-name">pinterest.alep-icon span</span><span class="i-code">0xf231</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf232" class="the-icons span3"><i class="demo-icon whatsapp.alep-icon span">&#xf232;</i> <span class="i-name">whatsapp.alep-icon span</span><span class="i-code">0xf232</span></div>
+        <div title="Code: 0xf233" class="the-icons span3"><i class="demo-icon server.alep-icon span">&#xf233;</i> <span class="i-name">server.alep-icon span</span><span class="i-code">0xf233</span></div>
+        <div title="Code: 0xf234" class="the-icons span3"><i class="demo-icon user-plus.alep-icon span">&#xf234;</i> <span class="i-name">user-plus.alep-icon span</span><span class="i-code">0xf234</span></div>
+        <div title="Code: 0xf235" class="the-icons span3"><i class="demo-icon user-times.alep-icon span">&#xf235;</i> <span class="i-name">user-times.alep-icon span</span><span class="i-code">0xf235</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf236" class="the-icons span3"><i class="demo-icon bed.alep-icon span">&#xf236;</i> <span class="i-name">bed.alep-icon span</span><span class="i-code">0xf236</span></div>
+        <div title="Code: 0xf237" class="the-icons span3"><i class="demo-icon viacoin.alep-icon span">&#xf237;</i> <span class="i-name">viacoin.alep-icon span</span><span class="i-code">0xf237</span></div>
+        <div title="Code: 0xf238" class="the-icons span3"><i class="demo-icon train.alep-icon span">&#xf238;</i> <span class="i-name">train.alep-icon span</span><span class="i-code">0xf238</span></div>
+        <div title="Code: 0xf239" class="the-icons span3"><i class="demo-icon subway.alep-icon span">&#xf239;</i> <span class="i-name">subway.alep-icon span</span><span class="i-code">0xf239</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf23a" class="the-icons span3"><i class="demo-icon medium.alep-icon span">&#xf23a;</i> <span class="i-name">medium.alep-icon span</span><span class="i-code">0xf23a</span></div>
+        <div title="Code: 0xf23b" class="the-icons span3"><i class="demo-icon y-combinator.alep-icon span">&#xf23b;</i> <span class="i-name">y-combinator.alep-icon span</span><span class="i-code">0xf23b</span></div>
+        <div title="Code: 0xf23c" class="the-icons span3"><i class="demo-icon optin-monster.alep-icon span">&#xf23c;</i> <span class="i-name">optin-monster.alep-icon span</span><span class="i-code">0xf23c</span></div>
+        <div title="Code: 0xf23d" class="the-icons span3"><i class="demo-icon opencart.alep-icon span">&#xf23d;</i> <span class="i-name">opencart.alep-icon span</span><span class="i-code">0xf23d</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf23e" class="the-icons span3"><i class="demo-icon expeditedssl.alep-icon span">&#xf23e;</i> <span class="i-name">expeditedssl.alep-icon span</span><span class="i-code">0xf23e</span></div>
+        <div title="Code: 0xf240" class="the-icons span3"><i class="demo-icon battery-4.alep-icon span">&#xf240;</i> <span class="i-name">battery-4.alep-icon span</span><span class="i-code">0xf240</span></div>
+        <div title="Code: 0xf241" class="the-icons span3"><i class="demo-icon battery-3.alep-icon span">&#xf241;</i> <span class="i-name">battery-3.alep-icon span</span><span class="i-code">0xf241</span></div>
+        <div title="Code: 0xf242" class="the-icons span3"><i class="demo-icon battery-2.alep-icon span">&#xf242;</i> <span class="i-name">battery-2.alep-icon span</span><span class="i-code">0xf242</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf243" class="the-icons span3"><i class="demo-icon battery-1.alep-icon span">&#xf243;</i> <span class="i-name">battery-1.alep-icon span</span><span class="i-code">0xf243</span></div>
+        <div title="Code: 0xf244" class="the-icons span3"><i class="demo-icon battery-0.alep-icon span">&#xf244;</i> <span class="i-name">battery-0.alep-icon span</span><span class="i-code">0xf244</span></div>
+        <div title="Code: 0xf245" class="the-icons span3"><i class="demo-icon mouse-pointer.alep-icon span">&#xf245;</i> <span class="i-name">mouse-pointer.alep-icon span</span><span class="i-code">0xf245</span></div>
+        <div title="Code: 0xf246" class="the-icons span3"><i class="demo-icon i-cursor.alep-icon span">&#xf246;</i> <span class="i-name">i-cursor.alep-icon span</span><span class="i-code">0xf246</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf247" class="the-icons span3"><i class="demo-icon object-group.alep-icon span">&#xf247;</i> <span class="i-name">object-group.alep-icon span</span><span class="i-code">0xf247</span></div>
+        <div title="Code: 0xf248" class="the-icons span3"><i class="demo-icon object-ungroup.alep-icon span">&#xf248;</i> <span class="i-name">object-ungroup.alep-icon span</span><span class="i-code">0xf248</span></div>
+        <div title="Code: 0xf249" class="the-icons span3"><i class="demo-icon sticky-note.alep-icon span">&#xf249;</i> <span class="i-name">sticky-note.alep-icon span</span><span class="i-code">0xf249</span></div>
+        <div title="Code: 0xf24a" class="the-icons span3"><i class="demo-icon sticky-note-o.alep-icon span">&#xf24a;</i> <span class="i-name">sticky-note-o.alep-icon span</span><span class="i-code">0xf24a</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf24b" class="the-icons span3"><i class="demo-icon cc-jcb.alep-icon span">&#xf24b;</i> <span class="i-name">cc-jcb.alep-icon span</span><span class="i-code">0xf24b</span></div>
+        <div title="Code: 0xf24c" class="the-icons span3"><i class="demo-icon cc-diners-club.alep-icon span">&#xf24c;</i> <span class="i-name">cc-diners-club.alep-icon span</span><span class="i-code">0xf24c</span></div>
+        <div title="Code: 0xf24d" class="the-icons span3"><i class="demo-icon clone.alep-icon span">&#xf24d;</i> <span class="i-name">clone.alep-icon span</span><span class="i-code">0xf24d</span></div>
+        <div title="Code: 0xf24e" class="the-icons span3"><i class="demo-icon balance-scale.alep-icon span">&#xf24e;</i> <span class="i-name">balance-scale.alep-icon span</span><span class="i-code">0xf24e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf250" class="the-icons span3"><i class="demo-icon hourglass-o.alep-icon span">&#xf250;</i> <span class="i-name">hourglass-o.alep-icon span</span><span class="i-code">0xf250</span></div>
+        <div title="Code: 0xf251" class="the-icons span3"><i class="demo-icon hourglass-1.alep-icon span">&#xf251;</i> <span class="i-name">hourglass-1.alep-icon span</span><span class="i-code">0xf251</span></div>
+        <div title="Code: 0xf252" class="the-icons span3"><i class="demo-icon hourglass-2.alep-icon span">&#xf252;</i> <span class="i-name">hourglass-2.alep-icon span</span><span class="i-code">0xf252</span></div>
+        <div title="Code: 0xf253" class="the-icons span3"><i class="demo-icon hourglass-3.alep-icon span">&#xf253;</i> <span class="i-name">hourglass-3.alep-icon span</span><span class="i-code">0xf253</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf254" class="the-icons span3"><i class="demo-icon hourglass.alep-icon span">&#xf254;</i> <span class="i-name">hourglass.alep-icon span</span><span class="i-code">0xf254</span></div>
+        <div title="Code: 0xf255" class="the-icons span3"><i class="demo-icon hand-grab-o.alep-icon span">&#xf255;</i> <span class="i-name">hand-grab-o.alep-icon span</span><span class="i-code">0xf255</span></div>
+        <div title="Code: 0xf256" class="the-icons span3"><i class="demo-icon hand-paper-o.alep-icon span">&#xf256;</i> <span class="i-name">hand-paper-o.alep-icon span</span><span class="i-code">0xf256</span></div>
+        <div title="Code: 0xf257" class="the-icons span3"><i class="demo-icon hand-scissors-o.alep-icon span">&#xf257;</i> <span class="i-name">hand-scissors-o.alep-icon span</span><span class="i-code">0xf257</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf258" class="the-icons span3"><i class="demo-icon hand-lizard-o.alep-icon span">&#xf258;</i> <span class="i-name">hand-lizard-o.alep-icon span</span><span class="i-code">0xf258</span></div>
+        <div title="Code: 0xf259" class="the-icons span3"><i class="demo-icon hand-spock-o.alep-icon span">&#xf259;</i> <span class="i-name">hand-spock-o.alep-icon span</span><span class="i-code">0xf259</span></div>
+        <div title="Code: 0xf25a" class="the-icons span3"><i class="demo-icon hand-pointer-o.alep-icon span">&#xf25a;</i> <span class="i-name">hand-pointer-o.alep-icon span</span><span class="i-code">0xf25a</span></div>
+        <div title="Code: 0xf25b" class="the-icons span3"><i class="demo-icon hand-peace-o.alep-icon span">&#xf25b;</i> <span class="i-name">hand-peace-o.alep-icon span</span><span class="i-code">0xf25b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf25c" class="the-icons span3"><i class="demo-icon trademark.alep-icon span">&#xf25c;</i> <span class="i-name">trademark.alep-icon span</span><span class="i-code">0xf25c</span></div>
+        <div title="Code: 0xf25d" class="the-icons span3"><i class="demo-icon registered.alep-icon span">&#xf25d;</i> <span class="i-name">registered.alep-icon span</span><span class="i-code">0xf25d</span></div>
+        <div title="Code: 0xf25e" class="the-icons span3"><i class="demo-icon creative-commons.alep-icon span">&#xf25e;</i> <span class="i-name">creative-commons.alep-icon span</span><span class="i-code">0xf25e</span></div>
+        <div title="Code: 0xf260" class="the-icons span3"><i class="demo-icon gg.alep-icon span">&#xf260;</i> <span class="i-name">gg.alep-icon span</span><span class="i-code">0xf260</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf261" class="the-icons span3"><i class="demo-icon gg-circle.alep-icon span">&#xf261;</i> <span class="i-name">gg-circle.alep-icon span</span><span class="i-code">0xf261</span></div>
+        <div title="Code: 0xf262" class="the-icons span3"><i class="demo-icon tripadvisor.alep-icon span">&#xf262;</i> <span class="i-name">tripadvisor.alep-icon span</span><span class="i-code">0xf262</span></div>
+        <div title="Code: 0xf263" class="the-icons span3"><i class="demo-icon odnoklassniki.alep-icon span">&#xf263;</i> <span class="i-name">odnoklassniki.alep-icon span</span><span class="i-code">0xf263</span></div>
+        <div title="Code: 0xf264" class="the-icons span3"><i class="demo-icon odnoklassniki-square.alep-icon span">&#xf264;</i> <span class="i-name">odnoklassniki-square.alep-icon span</span><span class="i-code">0xf264</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf265" class="the-icons span3"><i class="demo-icon get-pocket.alep-icon span">&#xf265;</i> <span class="i-name">get-pocket.alep-icon span</span><span class="i-code">0xf265</span></div>
+        <div title="Code: 0xf266" class="the-icons span3"><i class="demo-icon wikipedia-w.alep-icon span">&#xf266;</i> <span class="i-name">wikipedia-w.alep-icon span</span><span class="i-code">0xf266</span></div>
+        <div title="Code: 0xf267" class="the-icons span3"><i class="demo-icon safari.alep-icon span">&#xf267;</i> <span class="i-name">safari.alep-icon span</span><span class="i-code">0xf267</span></div>
+        <div title="Code: 0xf268" class="the-icons span3"><i class="demo-icon chrome-1.alep-icon span">&#xf268;</i> <span class="i-name">chrome-1.alep-icon span</span><span class="i-code">0xf268</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf269" class="the-icons span3"><i class="demo-icon firefox-1.alep-icon span">&#xf269;</i> <span class="i-name">firefox-1.alep-icon span</span><span class="i-code">0xf269</span></div>
+        <div title="Code: 0xf26a" class="the-icons span3"><i class="demo-icon opera-1.alep-icon span">&#xf26a;</i> <span class="i-name">opera-1.alep-icon span</span><span class="i-code">0xf26a</span></div>
+        <div title="Code: 0xf26b" class="the-icons span3"><i class="demo-icon internet-explorer.alep-icon span">&#xf26b;</i> <span class="i-name">internet-explorer.alep-icon span</span><span class="i-code">0xf26b</span></div>
+        <div title="Code: 0xf26c" class="the-icons span3"><i class="demo-icon television.alep-icon span">&#xf26c;</i> <span class="i-name">television.alep-icon span</span><span class="i-code">0xf26c</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf26d" class="the-icons span3"><i class="demo-icon contao.alep-icon span">&#xf26d;</i> <span class="i-name">contao.alep-icon span</span><span class="i-code">0xf26d</span></div>
+        <div title="Code: 0xf26e" class="the-icons span3"><i class="demo-icon 500px.alep-icon span">&#xf26e;</i> <span class="i-name">500px.alep-icon span</span><span class="i-code">0xf26e</span></div>
+        <div title="Code: 0xf270" class="the-icons span3"><i class="demo-icon amazon.alep-icon span">&#xf270;</i> <span class="i-name">amazon.alep-icon span</span><span class="i-code">0xf270</span></div>
+        <div title="Code: 0xf271" class="the-icons span3"><i class="demo-icon calendar-plus-o.alep-icon span">&#xf271;</i> <span class="i-name">calendar-plus-o.alep-icon span</span><span class="i-code">0xf271</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf272" class="the-icons span3"><i class="demo-icon calendar-minus-o.alep-icon span">&#xf272;</i> <span class="i-name">calendar-minus-o.alep-icon span</span><span class="i-code">0xf272</span></div>
+        <div title="Code: 0xf273" class="the-icons span3"><i class="demo-icon calendar-times-o.alep-icon span">&#xf273;</i> <span class="i-name">calendar-times-o.alep-icon span</span><span class="i-code">0xf273</span></div>
+        <div title="Code: 0xf274" class="the-icons span3"><i class="demo-icon calendar-check-o.alep-icon span">&#xf274;</i> <span class="i-name">calendar-check-o.alep-icon span</span><span class="i-code">0xf274</span></div>
+        <div title="Code: 0xf275" class="the-icons span3"><i class="demo-icon industry.alep-icon span">&#xf275;</i> <span class="i-name">industry.alep-icon span</span><span class="i-code">0xf275</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf276" class="the-icons span3"><i class="demo-icon map-pin.alep-icon span">&#xf276;</i> <span class="i-name">map-pin.alep-icon span</span><span class="i-code">0xf276</span></div>
+        <div title="Code: 0xf277" class="the-icons span3"><i class="demo-icon map-signs.alep-icon span">&#xf277;</i> <span class="i-name">map-signs.alep-icon span</span><span class="i-code">0xf277</span></div>
+        <div title="Code: 0xf278" class="the-icons span3"><i class="demo-icon map-o.alep-icon span">&#xf278;</i> <span class="i-name">map-o.alep-icon span</span><span class="i-code">0xf278</span></div>
+        <div title="Code: 0xf279" class="the-icons span3"><i class="demo-icon map.alep-icon span">&#xf279;</i> <span class="i-name">map.alep-icon span</span><span class="i-code">0xf279</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf27a" class="the-icons span3"><i class="demo-icon commenting.alep-icon span">&#xf27a;</i> <span class="i-name">commenting.alep-icon span</span><span class="i-code">0xf27a</span></div>
+        <div title="Code: 0xf27b" class="the-icons span3"><i class="demo-icon commenting-o.alep-icon span">&#xf27b;</i> <span class="i-name">commenting-o.alep-icon span</span><span class="i-code">0xf27b</span></div>
+        <div title="Code: 0xf27c" class="the-icons span3"><i class="demo-icon houzz.alep-icon span">&#xf27c;</i> <span class="i-name">houzz.alep-icon span</span><span class="i-code">0xf27c</span></div>
+        <div title="Code: 0xf27d" class="the-icons span3"><i class="demo-icon vimeo.alep-icon span">&#xf27d;</i> <span class="i-name">vimeo.alep-icon span</span><span class="i-code">0xf27d</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf27e" class="the-icons span3"><i class="demo-icon black-tie.alep-icon span">&#xf27e;</i> <span class="i-name">black-tie.alep-icon span</span><span class="i-code">0xf27e</span></div>
+        <div title="Code: 0xf280" class="the-icons span3"><i class="demo-icon fonticons.alep-icon span">&#xf280;</i> <span class="i-name">fonticons.alep-icon span</span><span class="i-code">0xf280</span></div>
+        <div title="Code: 0xf281" class="the-icons span3"><i class="demo-icon reddit-alien.alep-icon span">&#xf281;</i> <span class="i-name">reddit-alien.alep-icon span</span><span class="i-code">0xf281</span></div>
+        <div title="Code: 0xf282" class="the-icons span3"><i class="demo-icon edge.alep-icon span">&#xf282;</i> <span class="i-name">edge.alep-icon span</span><span class="i-code">0xf282</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf283" class="the-icons span3"><i class="demo-icon credit-card-alt.alep-icon span">&#xf283;</i> <span class="i-name">credit-card-alt.alep-icon span</span><span class="i-code">0xf283</span></div>
+        <div title="Code: 0xf284" class="the-icons span3"><i class="demo-icon codiepie.alep-icon span">&#xf284;</i> <span class="i-name">codiepie.alep-icon span</span><span class="i-code">0xf284</span></div>
+        <div title="Code: 0xf285" class="the-icons span3"><i class="demo-icon modx.alep-icon span">&#xf285;</i> <span class="i-name">modx.alep-icon span</span><span class="i-code">0xf285</span></div>
+        <div title="Code: 0xf286" class="the-icons span3"><i class="demo-icon fort-awesome.alep-icon span">&#xf286;</i> <span class="i-name">fort-awesome.alep-icon span</span><span class="i-code">0xf286</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf287" class="the-icons span3"><i class="demo-icon usb.alep-icon span">&#xf287;</i> <span class="i-name">usb.alep-icon span</span><span class="i-code">0xf287</span></div>
+        <div title="Code: 0xf288" class="the-icons span3"><i class="demo-icon product-hunt.alep-icon span">&#xf288;</i> <span class="i-name">product-hunt.alep-icon span</span><span class="i-code">0xf288</span></div>
+        <div title="Code: 0xf289" class="the-icons span3"><i class="demo-icon mixcloud.alep-icon span">&#xf289;</i> <span class="i-name">mixcloud.alep-icon span</span><span class="i-code">0xf289</span></div>
+        <div title="Code: 0xf28a" class="the-icons span3"><i class="demo-icon scribd.alep-icon span">&#xf28a;</i> <span class="i-name">scribd.alep-icon span</span><span class="i-code">0xf28a</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf28b" class="the-icons span3"><i class="demo-icon pause-circle.alep-icon span">&#xf28b;</i> <span class="i-name">pause-circle.alep-icon span</span><span class="i-code">0xf28b</span></div>
+        <div title="Code: 0xf28c" class="the-icons span3"><i class="demo-icon pause-circle-o.alep-icon span">&#xf28c;</i> <span class="i-name">pause-circle-o.alep-icon span</span><span class="i-code">0xf28c</span></div>
+        <div title="Code: 0xf28d" class="the-icons span3"><i class="demo-icon stop-circle.alep-icon span">&#xf28d;</i> <span class="i-name">stop-circle.alep-icon span</span><span class="i-code">0xf28d</span></div>
+        <div title="Code: 0xf28e" class="the-icons span3"><i class="demo-icon stop-circle-o.alep-icon span">&#xf28e;</i> <span class="i-name">stop-circle-o.alep-icon span</span><span class="i-code">0xf28e</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf290" class="the-icons span3"><i class="demo-icon shopping-bag.alep-icon span">&#xf290;</i> <span class="i-name">shopping-bag.alep-icon span</span><span class="i-code">0xf290</span></div>
+        <div title="Code: 0xf291" class="the-icons span3"><i class="demo-icon shopping-basket.alep-icon span">&#xf291;</i> <span class="i-name">shopping-basket.alep-icon span</span><span class="i-code">0xf291</span></div>
+        <div title="Code: 0xf292" class="the-icons span3"><i class="demo-icon hashtag.alep-icon span">&#xf292;</i> <span class="i-name">hashtag.alep-icon span</span><span class="i-code">0xf292</span></div>
+        <div title="Code: 0xf293" class="the-icons span3"><i class="demo-icon bluetooth.alep-icon span">&#xf293;</i> <span class="i-name">bluetooth.alep-icon span</span><span class="i-code">0xf293</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf294" class="the-icons span3"><i class="demo-icon bluetooth-b.alep-icon span">&#xf294;</i> <span class="i-name">bluetooth-b.alep-icon span</span><span class="i-code">0xf294</span></div>
+        <div title="Code: 0xf295" class="the-icons span3"><i class="demo-icon percent.alep-icon span">&#xf295;</i> <span class="i-name">percent.alep-icon span</span><span class="i-code">0xf295</span></div>
+        <div title="Code: 0xf296" class="the-icons span3"><i class="demo-icon gitlab.alep-icon span">&#xf296;</i> <span class="i-name">gitlab.alep-icon span</span><span class="i-code">0xf296</span></div>
+        <div title="Code: 0xf297" class="the-icons span3"><i class="demo-icon wpbeginner.alep-icon span">&#xf297;</i> <span class="i-name">wpbeginner.alep-icon span</span><span class="i-code">0xf297</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf298" class="the-icons span3"><i class="demo-icon wpforms.alep-icon span">&#xf298;</i> <span class="i-name">wpforms.alep-icon span</span><span class="i-code">0xf298</span></div>
+        <div title="Code: 0xf299" class="the-icons span3"><i class="demo-icon envira.alep-icon span">&#xf299;</i> <span class="i-name">envira.alep-icon span</span><span class="i-code">0xf299</span></div>
+        <div title="Code: 0xf29a" class="the-icons span3"><i class="demo-icon universal-access.alep-icon span">&#xf29a;</i> <span class="i-name">universal-access.alep-icon span</span><span class="i-code">0xf29a</span></div>
+        <div title="Code: 0xf29b" class="the-icons span3"><i class="demo-icon wheelchair-alt.alep-icon span">&#xf29b;</i> <span class="i-name">wheelchair-alt.alep-icon span</span><span class="i-code">0xf29b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf29c" class="the-icons span3"><i class="demo-icon question-circle-o.alep-icon span">&#xf29c;</i> <span class="i-name">question-circle-o.alep-icon span</span><span class="i-code">0xf29c</span></div>
+        <div title="Code: 0xf29d" class="the-icons span3"><i class="demo-icon blind.alep-icon span">&#xf29d;</i> <span class="i-name">blind.alep-icon span</span><span class="i-code">0xf29d</span></div>
+        <div title="Code: 0xf29e" class="the-icons span3"><i class="demo-icon audio-description.alep-icon span">&#xf29e;</i> <span class="i-name">audio-description.alep-icon span</span><span class="i-code">0xf29e</span></div>
+        <div title="Code: 0xf2a0" class="the-icons span3"><i class="demo-icon volume-control-phone.alep-icon span">&#xf2a0;</i> <span class="i-name">volume-control-phone.alep-icon span</span><span class="i-code">0xf2a0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2a1" class="the-icons span3"><i class="demo-icon braille.alep-icon span">&#xf2a1;</i> <span class="i-name">braille.alep-icon span</span><span class="i-code">0xf2a1</span></div>
+        <div title="Code: 0xf2a2" class="the-icons span3"><i class="demo-icon assistive-listening-systems.alep-icon span">&#xf2a2;</i> <span class="i-name">assistive-listening-systems.alep-icon span</span><span class="i-code">0xf2a2</span></div>
+        <div title="Code: 0xf2a3" class="the-icons span3"><i class="demo-icon american-sign-language-interpreting.alep-icon span">&#xf2a3;</i> <span class="i-name">american-sign-language-interpreting.alep-icon span</span><span class="i-code">0xf2a3</span></div>
+        <div title="Code: 0xf2a4" class="the-icons span3"><i class="demo-icon asl-interpreting.alep-icon span">&#xf2a4;</i> <span class="i-name">asl-interpreting.alep-icon span</span><span class="i-code">0xf2a4</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2a5" class="the-icons span3"><i class="demo-icon glide.alep-icon span">&#xf2a5;</i> <span class="i-name">glide.alep-icon span</span><span class="i-code">0xf2a5</span></div>
+        <div title="Code: 0xf2a6" class="the-icons span3"><i class="demo-icon glide-g.alep-icon span">&#xf2a6;</i> <span class="i-name">glide-g.alep-icon span</span><span class="i-code">0xf2a6</span></div>
+        <div title="Code: 0xf2a7" class="the-icons span3"><i class="demo-icon sign-language.alep-icon span">&#xf2a7;</i> <span class="i-name">sign-language.alep-icon span</span><span class="i-code">0xf2a7</span></div>
+        <div title="Code: 0xf2a8" class="the-icons span3"><i class="demo-icon low-vision.alep-icon span">&#xf2a8;</i> <span class="i-name">low-vision.alep-icon span</span><span class="i-code">0xf2a8</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2a9" class="the-icons span3"><i class="demo-icon viadeo.alep-icon span">&#xf2a9;</i> <span class="i-name">viadeo.alep-icon span</span><span class="i-code">0xf2a9</span></div>
+        <div title="Code: 0xf2aa" class="the-icons span3"><i class="demo-icon viadeo-square.alep-icon span">&#xf2aa;</i> <span class="i-name">viadeo-square.alep-icon span</span><span class="i-code">0xf2aa</span></div>
+        <div title="Code: 0xf2ab" class="the-icons span3"><i class="demo-icon snapchat.alep-icon span">&#xf2ab;</i> <span class="i-name">snapchat.alep-icon span</span><span class="i-code">0xf2ab</span></div>
+        <div title="Code: 0xf2ac" class="the-icons span3"><i class="demo-icon snapchat-ghost.alep-icon span">&#xf2ac;</i> <span class="i-name">snapchat-ghost.alep-icon span</span><span class="i-code">0xf2ac</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2ad" class="the-icons span3"><i class="demo-icon snapchat-square.alep-icon span">&#xf2ad;</i> <span class="i-name">snapchat-square.alep-icon span</span><span class="i-code">0xf2ad</span></div>
+        <div title="Code: 0xf2ae" class="the-icons span3"><i class="demo-icon pied-piper.alep-icon span">&#xf2ae;</i> <span class="i-name">pied-piper.alep-icon span</span><span class="i-code">0xf2ae</span></div>
+        <div title="Code: 0xf2b0" class="the-icons span3"><i class="demo-icon first-order.alep-icon span">&#xf2b0;</i> <span class="i-name">first-order.alep-icon span</span><span class="i-code">0xf2b0</span></div>
+        <div title="Code: 0xf2b1" class="the-icons span3"><i class="demo-icon yoast.alep-icon span">&#xf2b1;</i> <span class="i-name">yoast.alep-icon span</span><span class="i-code">0xf2b1</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2b2" class="the-icons span3"><i class="demo-icon themeisle.alep-icon span">&#xf2b2;</i> <span class="i-name">themeisle.alep-icon span</span><span class="i-code">0xf2b2</span></div>
+        <div title="Code: 0xf2b3" class="the-icons span3"><i class="demo-icon google-plus-circle.alep-icon span">&#xf2b3;</i> <span class="i-name">google-plus-circle.alep-icon span</span><span class="i-code">0xf2b3</span></div>
+        <div title="Code: 0xf2b4" class="the-icons span3"><i class="demo-icon font-awesome.alep-icon span">&#xf2b4;</i> <span class="i-name">font-awesome.alep-icon span</span><span class="i-code">0xf2b4</span></div>
+        <div title="Code: 0xf2b5" class="the-icons span3"><i class="demo-icon handshake-o.alep-icon span">&#xf2b5;</i> <span class="i-name">handshake-o.alep-icon span</span><span class="i-code">0xf2b5</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2b6" class="the-icons span3"><i class="demo-icon envelope-open.alep-icon span">&#xf2b6;</i> <span class="i-name">envelope-open.alep-icon span</span><span class="i-code">0xf2b6</span></div>
+        <div title="Code: 0xf2b7" class="the-icons span3"><i class="demo-icon envelope-open-o.alep-icon span">&#xf2b7;</i> <span class="i-name">envelope-open-o.alep-icon span</span><span class="i-code">0xf2b7</span></div>
+        <div title="Code: 0xf2b8" class="the-icons span3"><i class="demo-icon linode.alep-icon span">&#xf2b8;</i> <span class="i-name">linode.alep-icon span</span><span class="i-code">0xf2b8</span></div>
+        <div title="Code: 0xf2b9" class="the-icons span3"><i class="demo-icon address-book.alep-icon span">&#xf2b9;</i> <span class="i-name">address-book.alep-icon span</span><span class="i-code">0xf2b9</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2ba" class="the-icons span3"><i class="demo-icon address-book-o.alep-icon span">&#xf2ba;</i> <span class="i-name">address-book-o.alep-icon span</span><span class="i-code">0xf2ba</span></div>
+        <div title="Code: 0xf2bb" class="the-icons span3"><i class="demo-icon address-card.alep-icon span">&#xf2bb;</i> <span class="i-name">address-card.alep-icon span</span><span class="i-code">0xf2bb</span></div>
+        <div title="Code: 0xf2bc" class="the-icons span3"><i class="demo-icon address-card-o.alep-icon span">&#xf2bc;</i> <span class="i-name">address-card-o.alep-icon span</span><span class="i-code">0xf2bc</span></div>
+        <div title="Code: 0xf2bd" class="the-icons span3"><i class="demo-icon user-circle.alep-icon span">&#xf2bd;</i> <span class="i-name">user-circle.alep-icon span</span><span class="i-code">0xf2bd</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2be" class="the-icons span3"><i class="demo-icon user-circle-o.alep-icon span">&#xf2be;</i> <span class="i-name">user-circle-o.alep-icon span</span><span class="i-code">0xf2be</span></div>
+        <div title="Code: 0xf2c0" class="the-icons span3"><i class="demo-icon user-o.alep-icon span">&#xf2c0;</i> <span class="i-name">user-o.alep-icon span</span><span class="i-code">0xf2c0</span></div>
+        <div title="Code: 0xf2c1" class="the-icons span3"><i class="demo-icon id-badge.alep-icon span">&#xf2c1;</i> <span class="i-name">id-badge.alep-icon span</span><span class="i-code">0xf2c1</span></div>
+        <div title="Code: 0xf2c2" class="the-icons span3"><i class="demo-icon id-card.alep-icon span">&#xf2c2;</i> <span class="i-name">id-card.alep-icon span</span><span class="i-code">0xf2c2</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2c3" class="the-icons span3"><i class="demo-icon id-card-o.alep-icon span">&#xf2c3;</i> <span class="i-name">id-card-o.alep-icon span</span><span class="i-code">0xf2c3</span></div>
+        <div title="Code: 0xf2c4" class="the-icons span3"><i class="demo-icon quora.alep-icon span">&#xf2c4;</i> <span class="i-name">quora.alep-icon span</span><span class="i-code">0xf2c4</span></div>
+        <div title="Code: 0xf2c5" class="the-icons span3"><i class="demo-icon free-code-camp.alep-icon span">&#xf2c5;</i> <span class="i-name">free-code-camp.alep-icon span</span><span class="i-code">0xf2c5</span></div>
+        <div title="Code: 0xf2c6" class="the-icons span3"><i class="demo-icon telegram.alep-icon span">&#xf2c6;</i> <span class="i-name">telegram.alep-icon span</span><span class="i-code">0xf2c6</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2c7" class="the-icons span3"><i class="demo-icon thermometer.alep-icon span">&#xf2c7;</i> <span class="i-name">thermometer.alep-icon span</span><span class="i-code">0xf2c7</span></div>
+        <div title="Code: 0xf2c8" class="the-icons span3"><i class="demo-icon thermometer-3.alep-icon span">&#xf2c8;</i> <span class="i-name">thermometer-3.alep-icon span</span><span class="i-code">0xf2c8</span></div>
+        <div title="Code: 0xf2c9" class="the-icons span3"><i class="demo-icon thermometer-2.alep-icon span">&#xf2c9;</i> <span class="i-name">thermometer-2.alep-icon span</span><span class="i-code">0xf2c9</span></div>
+        <div title="Code: 0xf2ca" class="the-icons span3"><i class="demo-icon thermometer-quarter.alep-icon span">&#xf2ca;</i> <span class="i-name">thermometer-quarter.alep-icon span</span><span class="i-code">0xf2ca</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2cb" class="the-icons span3"><i class="demo-icon thermometer-0.alep-icon span">&#xf2cb;</i> <span class="i-name">thermometer-0.alep-icon span</span><span class="i-code">0xf2cb</span></div>
+        <div title="Code: 0xf2cc" class="the-icons span3"><i class="demo-icon shower.alep-icon span">&#xf2cc;</i> <span class="i-name">shower.alep-icon span</span><span class="i-code">0xf2cc</span></div>
+        <div title="Code: 0xf2cd" class="the-icons span3"><i class="demo-icon bath.alep-icon span">&#xf2cd;</i> <span class="i-name">bath.alep-icon span</span><span class="i-code">0xf2cd</span></div>
+        <div title="Code: 0xf2ce" class="the-icons span3"><i class="demo-icon podcast.alep-icon span">&#xf2ce;</i> <span class="i-name">podcast.alep-icon span</span><span class="i-code">0xf2ce</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2d0" class="the-icons span3"><i class="demo-icon window-maximize.alep-icon span">&#xf2d0;</i> <span class="i-name">window-maximize.alep-icon span</span><span class="i-code">0xf2d0</span></div>
+        <div title="Code: 0xf2d1" class="the-icons span3"><i class="demo-icon window-minimize.alep-icon span">&#xf2d1;</i> <span class="i-name">window-minimize.alep-icon span</span><span class="i-code">0xf2d1</span></div>
+        <div title="Code: 0xf2d2" class="the-icons span3"><i class="demo-icon window-restore.alep-icon span">&#xf2d2;</i> <span class="i-name">window-restore.alep-icon span</span><span class="i-code">0xf2d2</span></div>
+        <div title="Code: 0xf2d3" class="the-icons span3"><i class="demo-icon window-close.alep-icon span">&#xf2d3;</i> <span class="i-name">window-close.alep-icon span</span><span class="i-code">0xf2d3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2d4" class="the-icons span3"><i class="demo-icon window-close-o.alep-icon span">&#xf2d4;</i> <span class="i-name">window-close-o.alep-icon span</span><span class="i-code">0xf2d4</span></div>
+        <div title="Code: 0xf2d5" class="the-icons span3"><i class="demo-icon bandcamp.alep-icon span">&#xf2d5;</i> <span class="i-name">bandcamp.alep-icon span</span><span class="i-code">0xf2d5</span></div>
+        <div title="Code: 0xf2d6" class="the-icons span3"><i class="demo-icon grav.alep-icon span">&#xf2d6;</i> <span class="i-name">grav.alep-icon span</span><span class="i-code">0xf2d6</span></div>
+        <div title="Code: 0xf2d7" class="the-icons span3"><i class="demo-icon etsy.alep-icon span">&#xf2d7;</i> <span class="i-name">etsy.alep-icon span</span><span class="i-code">0xf2d7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2d8" class="the-icons span3"><i class="demo-icon imdb.alep-icon span">&#xf2d8;</i> <span class="i-name">imdb.alep-icon span</span><span class="i-code">0xf2d8</span></div>
+        <div title="Code: 0xf2d9" class="the-icons span3"><i class="demo-icon ravelry.alep-icon span">&#xf2d9;</i> <span class="i-name">ravelry.alep-icon span</span><span class="i-code">0xf2d9</span></div>
+        <div title="Code: 0xf2da" class="the-icons span3"><i class="demo-icon eercast.alep-icon span">&#xf2da;</i> <span class="i-name">eercast.alep-icon span</span><span class="i-code">0xf2da</span></div>
+        <div title="Code: 0xf2db" class="the-icons span3"><i class="demo-icon microchip.alep-icon span">&#xf2db;</i> <span class="i-name">microchip.alep-icon span</span><span class="i-code">0xf2db</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf2dc" class="the-icons span3"><i class="demo-icon snowflake-o.alep-icon span">&#xf2dc;</i> <span class="i-name">snowflake-o.alep-icon span</span><span class="i-code">0xf2dc</span></div>
+        <div title="Code: 0xf2dd" class="the-icons span3"><i class="demo-icon superpowers.alep-icon span">&#xf2dd;</i> <span class="i-name">superpowers.alep-icon span</span><span class="i-code">0xf2dd</span></div>
+        <div title="Code: 0xf2de" class="the-icons span3"><i class="demo-icon wpexplorer.alep-icon span">&#xf2de;</i> <span class="i-name">wpexplorer.alep-icon span</span><span class="i-code">0xf2de</span></div>
+        <div title="Code: 0xf2e0" class="the-icons span3"><i class="demo-icon meetup.alep-icon span">&#xf2e0;</i> <span class="i-name">meetup.alep-icon span</span><span class="i-code">0xf2e0</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xf300" class="the-icons span3"><i class="demo-icon github-squared.alep-icon span">&#xf300;</i> <span class="i-name">github-squared.alep-icon span</span><span class="i-code">0xf300</span></div>
+        <div title="Code: 0xf304" class="the-icons span3"><i class="demo-icon twitter-squared.alep-icon span">&#xf304;</i> <span class="i-name">twitter-squared.alep-icon span</span><span class="i-code">0xf304</span></div>
+        <div title="Code: 0xf308" class="the-icons span3"><i class="demo-icon facebook-squared.alep-icon span">&#xf308;</i> <span class="i-name">facebook-squared.alep-icon span</span><span class="i-code">0xf308</span></div>
+        <div title="Code: 0xf30c" class="the-icons span3"><i class="demo-icon linkedin-squared.alep-icon span">&#xf30c;</i> <span class="i-name">linkedin-squared.alep-icon span</span><span class="i-code">0xf30c</span></div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>
+  </body>
+</html>

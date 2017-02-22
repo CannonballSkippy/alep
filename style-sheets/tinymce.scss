@@ -1,0 +1,105 @@
+
+// ####################################################################################
+// ####################################################################################
+
+//	CUSTOM STYLES FOR THE WORDPRESS EDITOR
+
+// ####################################################################################
+// ####################################################################################
+
+// ==================================================================
+// Accordion in posts and pages
+// ==================================================================
+
+// https://code.tutsplus.com/tutorials/adding-custom-styles-in-wordpress-tinymce-editor--wp-24980
+// please note that some of these styles are dependent on the Tiny MCE CSS file
+
+$defaultalert: #fafafa;
+$redalert: #af142d;
+$greenalert: #05bd4c;
+$bluealert: #0562bd;
+$yellowalert: #bdad05;
+$pinkalert: #bd057e;
+
+.accordion_title_wrapper {
+	border-top: 1px dotted #ddd;
+	border-bottom: 1px dotted #ddd;
+	background-color: #FBFBFB;
+	margin-top: -1px;
+	padding: 12px;
+	color: black;
+}
+
+.accordion_title_wrapper * {
+	font-family: "Roboto Condensed", sans-serif !important;
+}
+
+.accordion_title_wrapper,
+.accordion_content_wrapper {
+	border-radius: 5px;
+}
+
+.accordion_title_wrapper p {
+	margin: 0;
+}
+.accordion_content_wrapper p {
+	margin: 0;
+}
+
+.accordion_content_wrapper {
+	background-color: #fafafa;
+	padding: 2% 5% 2% 5%;
+}
+
+// -------------------------------------------------------------------
+
+
+
+.alertbox {
+	float: right;
+	min-width: 50%;
+	padding: 15px;
+	border-radius: 5px;
+	color: black;
+	margin: 10px;
+}
+
+.alertbox.default {
+	border: 1px dashed grey;
+	background-color: $defaultalert;
+}
+
+.alertbox.red {
+	border: 1px dashed #D60000;
+	background-color: rgba( $redalert, .1 );
+}
+
+.alertbox.green {
+	border: 1px dashed #007F00;
+	background-color: rgba( $greenalert, .1 );
+}
+
+.alertbox.blue {
+	border: 1px dashed blue;
+	background-color: rgba( $bluealert, .1 );
+}
+
+.alertbox.yellow {
+	border: 1px dashed #B8B600;
+	background-color: rgba( $yellowalert, .1 );
+}
+
+.alertbox.pink {
+	border: 1px dashed #D700B6;
+	background-color: rgba( $pinkalert, .1 );
+}
+
+.emphasis-box {
+	border-left: 5px solid #1a1a1a;
+	padding: 10px 10px 10px 25px;
+	background-color: #f9f9f9;
+	border-radius: 0px 5px 5px 0px;
+	font-weight: 400;
+	font-size: 16px;
+	color: #000000;
+}
