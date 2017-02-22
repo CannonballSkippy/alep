@@ -3,6 +3,7 @@
 *.sublime-project
 *.sublime-workspace
 *.sublime-workspace
+*.cfg
 
 # Windows image file caches
 Thumbs.db
